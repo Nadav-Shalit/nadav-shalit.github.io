@@ -1,1 +1,0 @@
-# nadav-shalit.github.io
