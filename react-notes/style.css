@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+
+body,
+html,
+div.board,
+div#react-container {
+  height: 99%;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div.board {
+  width: 100%;
+  background: url(cork.png);
+}
+
+div.note {
+  min-height: 165px;
+  height:auto;
+  width: 150px;
+  background-color: yellow;
+  margin: 2px 0;
+  position: absolute;
+  cursor: -webkit-grab;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .2);
+  overflow: hidden;
+  padding:15px 5px;
+}
+
+div.note:active {
+  cursor: -webkit-grabbing;
+}
+
+div.note p {
+  margin: 5px;
+  font-size: 15px;
+  padding: 5px;
+  /*font-family: "Shadows Into Light", Arial*/;
+}
+
+div.note:hover > span {
+  opacity: 1;
+}
+
+div.note > span {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  opacity: 0;
+  transition: opacity .25s linear;
+}
+
+div.note button {
+  margin: 2px;
+}
+
+div.note > textarea {
+  height: 75%;
+  background: #fff;
+}
+
+.board > button {
+    position: fixed;
+    top: 170px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    filter: none;
+    margin: 0;
+    line-height: normal;
+    padding: 0;
+    font-size: large;
+    filter: opacity(0.5);
+  transition: transform 1s;
+  will-change: scale;
+  
+}
+.board > button:hover {
+    color: #f5f5f5;
+    text-decoration: none;
+    background-color: #6baee7;
+    /*width: 50px;
+    height: 50px;
+    font-size: xx-large;*/
+    filter:none;
+    transform: scale(1.2);
+  
+}
+img.pushpin{
+
+    position: absolute;
+    width: 35px;
+    right: 40%;
+    top: 0;
+}
+ul#info{
+    background-color: lightskyblue;
+    width: 30%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    margin: 5px;
+}
