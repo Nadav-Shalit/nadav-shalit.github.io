@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Nadav Shalit - CSV Parser</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body >
+<ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active"> CSV Parser </li>
+</ol>
+    <div class="container">
+        <div >
+            <h1>CSV files parser</h1>
+            <input id="uploadInput" type="file" class="btn btn-default btn-sm" name="myFiles"  onchange="csvFile.getCsvData();"  accept=".csv">
+            <input type="button" class="btn btn-primary btn-sm" id="btnParse" onclick="parseCsv()" value="Parse CSV" disabled="true">
+            <hr>
+            <p><a href="tests.html" class="btn btn-info btn-xs">Unit tests</a></p>
+            <p>Is file empty <label id="lblIsEmpty"></label></p>       
+            <p>Rows Count <label id="lblRowsCount"></label></p>       
+            <p>Columns Count <label id="lblColumnsCount"></label></p>       
+            <p>Columns list<ol id="ulHeader"></ol></p>
+            <p>
+            CSV file content
+                <textarea id="txtOutput"></textarea>
+            </p>       
+            
+        </div>
+        <input type="hidden" id="hdnCsvData" value=""></input>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
+    <script src="js/loadFile.js"></script>
+    <script src="js/csv.js"></script>
+</body>
+</html>

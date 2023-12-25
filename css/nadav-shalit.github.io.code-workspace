@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "nadav-shalit.github.io",
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "nadav-shalit.github.io"
+  }
+}
