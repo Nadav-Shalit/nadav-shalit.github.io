@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=600, initial-scale=1.0" />
+    <title>Fizz Buzz</title>
+    <style>
+      .fizzBuzz {
+        color: lime;
+      }
+      .Fizz {
+        color: blue;
+      }
+      .Buzz {
+        color: orange;
+      }
+      #header-body {
+        width: 85%;
+        margin: 0 auto;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active">Buzz Fizz</li>
+    </ol>
+    <div id="header-body">
+      <h1>Buzz Fizz</h1>
+      <div class="container-fluid"></div>
+
+      <div>By Nadav Shalit</div>
+    </div>
+    <div class="row m-2">
+      <div class="col-auto">
+        <input
+          type="number"
+          min="0"
+          max="100"
+          maxlength="3"
+          class="form-control"
+          onmouseup="fizzBuzz()"
+        />
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-primary" onclick="fizzBuzz()">Fizz Buzz</button>
+      </div>
+    </div>
+    <div class="row m-2 h-50 overflow-auto">
+      <div class="col-md-3 text-white bg-dark">
+        <ol id="resList"></ol>
+      </div>
+    </div>
+    <script src="fizzBuzz.js"></script>
+  </body>
+</html>
