@@ -1,3 +1,24 @@
+const setEvent = () => {
+  const input = document.querySelector('[type="number"]');
+  input.oninput = (e) => {
+    const inp = e.target;
+    const maxLen = +inp.attributes.maxlength.value;
+    if (inp.value && inp.value.length > maxLen) {
+      inp.value = inp.value.slice(0, maxLen);
+    }
+  };
+  input.onblur = (e) => {
+    fizzBuzz();
+  };
+  input.onkeyup = (e) => {
+    if (e.key === "Enter") {
+      fizzBuzz();
+    }
+  };
+  input.onchange = (e) => {
+    fizzBuzz();
+  };
+};
 const fizzBuzz = () => {
   const destValue = +document.querySelector('[type="number"]').value;
   const res = [];
@@ -17,6 +38,7 @@ const fizzBuzz = () => {
 };
 
 const showRes = (res) => {
+  const divRes = document.querySelector("div.overflow-auto");
   document.querySelector("#resList").innerHTML = null;
   res.forEach((itm) => {
     const li = document.createElement("li");
@@ -24,4 +46,6 @@ const showRes = (res) => {
     li.classList.add(itm);
     document.querySelector("#resList").appendChild(li);
   });
+  divRes.scrollTop = divRes.scrollHeight;
 };
+setEvent();
