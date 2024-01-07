@@ -1,3 +1,13 @@
+const setEvent = () => {
+  const input = document.querySelector('[type="number"]');
+  input.oninput = (e) => {
+    const inp = e.target;
+    const maxLen = +inp.attributes.maxlength.value;
+    if (inp.value && inp.value.length > maxLen) {
+      inp.value = inp.value.slice(0, maxLen);
+    }
+  };
+};
 const fizzBuzz = () => {
   const destValue = +document.querySelector('[type="number"]').value;
   const res = [];
@@ -25,3 +35,4 @@ const showRes = (res) => {
     document.querySelector("#resList").appendChild(li);
   });
 };
+setEvent();
