@@ -7,6 +7,17 @@ const setEvent = () => {
       inp.value = inp.value.slice(0, maxLen);
     }
   };
+  input.onblur = (e) => {
+    fizzBuzz();
+  };
+  input.onkeyup = (e) => {
+    if (e.key === "Enter") {
+      fizzBuzz();
+    }
+  };
+  input.onchange = (e) => {
+    fizzBuzz();
+  };
 };
 const fizzBuzz = () => {
   const destValue = +document.querySelector('[type="number"]').value;
@@ -27,6 +38,7 @@ const fizzBuzz = () => {
 };
 
 const showRes = (res) => {
+  const divRes = document.querySelector("div.overflow-auto");
   document.querySelector("#resList").innerHTML = null;
   res.forEach((itm) => {
     const li = document.createElement("li");
@@ -34,5 +46,6 @@ const showRes = (res) => {
     li.classList.add(itm);
     document.querySelector("#resList").appendChild(li);
   });
+  divRes.scrollTop = divRes.scrollHeight;
 };
 setEvent();

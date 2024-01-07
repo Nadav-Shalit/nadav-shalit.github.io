@@ -41,24 +41,28 @@
 
       <div>By Nadav Shalit</div>
     </div>
-    <div class="row m-2">
-      <div class="col-auto">
-        <input
-          type="number"
-          min="0"
-          max="100"
-          maxlength="3"
-          class="form-control"
-          onmouseup="fizzBuzz()"
-        />
+    <div class="container bg-dark rounded p-1 w-25">
+      <div class="row d-flex justify-content-center">
+        <div class="col-4">
+          <input
+            type="number"
+            min="0"
+            max="999"
+            maxlength="3"
+            class="form-control"
+            onmouseup="fizzBuzz()"
+          />
+        </div>
+        <div class="col-4">
+          <button class="btn btn-primary" onclick="fizzBuzz()">
+            Fizz Buzz
+          </button>
+        </div>
       </div>
-      <div class="col-auto">
-        <button class="btn btn-primary" onclick="fizzBuzz()">Fizz Buzz</button>
-      </div>
-    </div>
-    <div class="row m-2 h-50 overflow-auto">
-      <div class="col-md-3 text-white bg-dark">
-        <ol id="resList"></ol>
+      <div class="row m-2 h-50 d-flex justify-content-center overflow-auto">
+        <div class="col-md-3">
+          <ol id="resList" class="text-white"></ol>
+        </div>
       </div>
     </div>
     <script src="fizzBuzz.js"></script>
