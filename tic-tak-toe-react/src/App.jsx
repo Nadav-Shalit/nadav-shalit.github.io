@@ -3,16 +3,19 @@ import Board from "./components/Board/Board";
 import GameLog from "./components/GameLog/GameLog";
 import { useState } from "react";
 
+function getActivePlayer(curTurnLog) {
+  const curPlayer =
+    curTurnLog.length > 0 && curTurnLog[0].curPlayer === "X" ? "O" : "X";
+  return curPlayer;
+}
 function App() {
   console.log("App ", new Date().toLocaleTimeString());
-  const [activePlayer, setActivePlayer] = useState("X");
   const [logTurns, setLogTurns] = useState([]);
+  const activePlayer = getActivePlayer(logTurns);
   function togglePlayer(rowIdx, colIdx) {
-    setActivePlayer((curPlayer) => (curPlayer === "X" ? "O" : "X"));
     setLogTurns((curLog) => {
       const newLog = [...curLog];
-      let curPlayer = "X";
-      curPlayer = newLog.length > 0 && newLog[0].curPlayer === "X" ? "O" : "X";
+      const curPlayer = getActivePlayer(newLog);
       newLog.unshift({
         time: new Date(),
         symbolIdx: { rowIdx, colIdx },
