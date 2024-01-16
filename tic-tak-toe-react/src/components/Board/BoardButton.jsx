@@ -1,15 +1,7 @@
 export default function BoardButton({ rowIdx, colIdx, symbol, click }) {
-  // const key = [rowIdx, colIdx].join(",");
-  // console.log("BoardButton.jsx", {
-  //   key,
-  //   rowIdx,
-  //   colIdx,
-  //   symbol,
-  //   PlayerSymbol,
-  //   click,
-  // });
-  function handleButtnClick() {
+  function handleButtnClick(e) {
     console.log("click", click, { rowIdx, colIdx });
+    e.target.setAttribute("disabled", "disabled");
     click();
   }
   return (

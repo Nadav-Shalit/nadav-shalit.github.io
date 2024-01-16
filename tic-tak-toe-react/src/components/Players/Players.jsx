@@ -1,6 +1,6 @@
 import Player from "./Player";
 export default function Players({ activePlayer }) {
-  console.log("Players.jsx", { activePlayer });
+  // console.log("Players.jsx", { activePlayer });
 
   return (
     <ol id="players" className="highlight-player">

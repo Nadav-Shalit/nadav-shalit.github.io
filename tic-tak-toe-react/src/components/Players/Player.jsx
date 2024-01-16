@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Player({ activePlayer, idx, symbol }) {
   const [playerName, setPlayerName] = useState(`Player ${idx + 1}`);
   const [isEditMode, setIsEditMode] = useState(false);
-  console.log("Player.jsx", { activePlayer, symbol });
+  // console.log("Player.jsx", { activePlayer, symbol });
   function handleClick() {
     setIsEditMode((editMode) => !editMode);
   }
@@ -12,7 +12,7 @@ export default function Player({ activePlayer, idx, symbol }) {
     setPlayerName(e.target.value);
   }
   return (
-    <li key={idx} className={activePlayer === symbol ? "active" : ""}>
+    <li className={activePlayer === symbol ? "active" : ""}>
       <span className="player">
         {isEditMode ? (
           <input
