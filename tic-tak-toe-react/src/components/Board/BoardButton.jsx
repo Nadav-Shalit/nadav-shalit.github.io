@@ -1,12 +1,13 @@
-export default function BoardButton({ rowIdx, colIdx, symbol, click }) {
+export default function BoardButton({ symbol, click, winner }) {
+  const isdisabled = symbol || winner ? "disabled" : undefined;
   function handleButtnClick(e) {
-    console.log("click", click, { rowIdx, colIdx });
-    e.target.setAttribute("disabled", "disabled");
     click();
   }
   return (
     <li>
-      <button onClick={handleButtnClick}>{symbol}</button>
+      <button disabled={isdisabled} onClick={handleButtnClick}>
+        {symbol}
+      </button>
     </li>
   );
 }

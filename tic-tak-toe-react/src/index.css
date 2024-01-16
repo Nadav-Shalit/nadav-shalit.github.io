@@ -188,8 +188,12 @@ ol {
   cursor: pointer;
   font-family: "Caprasimo", cursive;
   padding: 1rem;
+  border-radius: 5px;
 }
-
+#game-board button:disabled {
+  border-style: inset;
+  border-color: #312f27;
+}
 #game-over {
   position: absolute;
   top: 0;
