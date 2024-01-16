@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function Player({ activePlayer, idx, symbol }) {
+export default function Player({
+  activePlayer,
+  idx,
+  symbol,
+  onUpdatePlayerName,
+}) {
   const [playerName, setPlayerName] = useState(`Player ${idx + 1}`);
   const [isEditMode, setIsEditMode] = useState(false);
   // console.log("Player.jsx", { activePlayer, symbol });
@@ -10,6 +15,7 @@ export default function Player({ activePlayer, idx, symbol }) {
   function handleInput(e) {
     // console.log({ target: e.target, val: e.target.value });
     setPlayerName(e.target.value);
+    onUpdatePlayerName(symbol, e.target.value);
   }
   return (
     <li className={activePlayer === symbol ? "active" : ""}>

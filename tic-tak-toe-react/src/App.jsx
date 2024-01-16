@@ -18,6 +18,10 @@ function getActivePlayer(curTurnLog) {
 
 function App() {
   const [gameTurns, setLogTurns] = useState([]);
+  const [playersNames, setPlayersNames] = useState({
+    X: "Player 1",
+    O: "Player 2",
+  });
   console.log("App ", new Date().toLocaleTimeString());
   let winner = null;
   let gameBoard = [...boardInit].map((arr) => [...arr].map((itm) => itm));
@@ -32,7 +36,8 @@ function App() {
       const sndSymbol = gameBoard[comb[1].row][comb[1].column];
       const trdSymbol = gameBoard[comb[2].row][comb[2].column];
       if (fstSymbol && fstSymbol === sndSymbol && fstSymbol === trdSymbol) {
-        winner = fstSymbol;
+        console.log("iswin", { playersNames });
+        winner = `${playersNames[fstSymbol]} [${fstSymbol}]`;
       }
       if (!winner && gameTurns.length === 9) {
         winner = "drow";
@@ -54,11 +59,18 @@ function App() {
   function handleRematch() {
     setLogTurns([]);
   }
-
+  function updatePlayers(players) {
+    setPlayersNames(players);
+    console.log("App", { playersNames, players });
+  }
   return (
     <main>
       <div id="game-container">
-        <Players activePlayer={activePlayer}></Players>
+        <Players
+          playersNames={playersNames}
+          onUpdatePlayers={updatePlayers}
+          activePlayer={activePlayer}
+        ></Players>
         {winner && (
           <GameOver onRematch={handleRematch} winner={winner}></GameOver>
         )}
