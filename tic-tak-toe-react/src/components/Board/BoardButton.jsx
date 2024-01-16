@@ -1,11 +1,8 @@
-export default function BoardButton({ symbol, click, winner }) {
+export default function BoardButton({ symbol, togglePlayer, winner }) {
   const isdisabled = symbol || winner ? "disabled" : undefined;
-  function handleButtnClick(e) {
-    click();
-  }
   return (
     <li>
-      <button disabled={isdisabled} onClick={handleButtnClick}>
+      <button disabled={isdisabled} onClick={togglePlayer}>
         {symbol}
       </button>
     </li>

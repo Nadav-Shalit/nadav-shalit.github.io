@@ -12,7 +12,7 @@ export default function Board({ activePlayer, togglePlayer, board, winner }) {
             {row.map((btnVal, colIdx) => (
               <BoardButton
                 key={[rowIdx, colIdx].join(",")}
-                click={() => handleClick(rowIdx, colIdx)}
+                togglePlayer={() => handleClick(rowIdx, colIdx)}
                 rowIdx={rowIdx}
                 colIdx={colIdx}
                 symbol={btnVal}
