@@ -9,7 +9,10 @@ const boardInit = [
   [null, null, null],
   [null, null, null],
 ];
-
+let playersNames = {
+  X: "Player 1",
+  O: "Player 2",
+};
 function getActivePlayer(curTurnLog) {
   const curPlayer =
     curTurnLog.length > 0 && curTurnLog[0].curPlayer === "X" ? "O" : "X";
@@ -18,10 +21,7 @@ function getActivePlayer(curTurnLog) {
 
 function App() {
   const [gameTurns, setLogTurns] = useState([]);
-  const [playersNames, setPlayersNames] = useState({
-    X: "Player 1",
-    O: "Player 2",
-  });
+
   console.log("App ", new Date().toLocaleTimeString());
   let winner = null;
   let gameBoard = [...boardInit].map((arr) => [...arr].map((itm) => itm));
@@ -60,15 +60,15 @@ function App() {
     setLogTurns([]);
   }
   function updatePlayers(players) {
-    setPlayersNames(players);
     console.log("App", { playersNames, players });
+    playersNames = players;
   }
   return (
     <main>
       <div id="game-container">
         <Players
           playersNames={playersNames}
-          onUpdatePlayers={updatePlayers}
+          onUpdatePlayers={(pl) => updatePlayers(pl)}
           activePlayer={activePlayer}
         ></Players>
         {winner && (
