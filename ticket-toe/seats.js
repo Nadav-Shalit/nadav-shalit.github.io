@@ -15,11 +15,46 @@ class Arena {
   }
 
   //Setter
-  set saveChair(chairId) {
-    console.log({ chairId });
+  set soldChair(chairId) {
     const [c, row, chair] = chairId.split("-");
     this._arenaStaus[row][chair] = "X";
-    console.log(this._arenaStaus);
+  }
+  set markChair(chairId) {
+    const [c, row, chair] = chairId.split("-");
+    this._arenaStaus[row][chair] = "S";
+  }
+  set unMarkChair(chairId) {
+    const [c, row, chair] = chairId.split("-");
+    this._arenaStaus[row][chair] = "O";
+  }
+
+  calcArena() {
+    const capacity = this.rows * this.chairs;
+    let availablesChairs = 0;
+    let soldChairs = 0;
+    let savedChairs = 0;
+
+    Object.entries(this._arenaStaus).map((row) => {
+      const [rowNum, chairs] = row;
+
+      Object.entries(chairs).map((chr) => {
+        const [chairNum, value] = chr;
+        switch (value) {
+          case "O":
+            availablesChairs++;
+            break;
+          case "X":
+            soldChairs++;
+            break;
+          case "S":
+            savedChairs++;
+            break;
+        }
+      });
+    });
+    // console.log({ availablesChairs, soldChairs, savedChairs });
+    const capacityPct = Math.floor((1 - availablesChairs / capacity) * 100);
+    return { capacity, availablesChairs, soldChairs, savedChairs, capacityPct };
   }
   // Method
   initAvailabeCapacty() {
@@ -28,8 +63,6 @@ class Arena {
       for (let chairIdx = 1; chairIdx <= this.chairs; chairIdx++) {
         this._arenaStaus[rowIdx][chairIdx] = "O";
       }
-      console.log("this._arenaStaus[rowIdx]", this._arenaStaus[rowIdx]);
     }
-    console.log({ arenaStaus: this._arenaStaus });
   }
 }
