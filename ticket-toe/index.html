@@ -1,0 +1,126 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Buy Ticket</title>
+  </head>
+  <body>
+    <header>Ticket-toe</header>
+    <main>
+      <div id="arena-form">
+        <ul>
+          <li>
+            <span>Rows</span>
+            <span>
+              <input type="text" id="rows" />
+            </span>
+          </li>
+          <li>
+            <span>Chairs</span>
+            <span>
+              <input
+                type="number"
+                min="1"
+                max="22"
+                id="chairs"
+                onblur="validChairs(event)"
+              />
+            </span>
+          </li>
+          <li>
+            <button onclick="handleDrowClick()">Drow</button>
+          </li>
+        </ul>
+        <div>
+          <button id="checkout" onclick="validCheckout()" disabled>
+            Checkout
+          </button>
+        </div>
+      </div>
+
+      <div class="stage">
+        <h5>stage</h5>
+      </div>
+      <div id="hall">
+        <ol></ol>
+      </div>
+    </main>
+
+    <script src="seats.js"></script>
+    <script type="text/javascript">
+      var clsArena = undefined;
+      const validChairs = (e) => {
+        if (e && e.target && +e.target.value > +e.target.getAttribute("max")) {
+          alert(`Max chairs per row is ${e.target.getAttribute("max")}`);
+          e.target.value = +e.target.getAttribute("max");
+        }
+      };
+      const validCheckout = () => {
+        const selectedChairs = document.querySelectorAll("li.S");
+        Array.from(selectedChairs).forEach((chr, idx) => {
+          clsArena.saveChair = chr.id;
+          console.log({ idx, pos: chr.id });
+        });
+        drowArena();
+      };
+      const ToggleSelect = (id) => {
+        const selectedChair = document.querySelector(`#${id}`);
+        if (selectedChair.classList.contains("O")) {
+          selectedChair.classList.replace("O", "S");
+        } else {
+          selectedChair.classList.replace("S", "O");
+        }
+        ToggleCheckOut();
+      };
+      const ToggleCheckOut = () => {
+        // const len = document.querySelectorAll('li.S').length
+        document.querySelector("button#checkout").disabled =
+          !!!document.querySelectorAll("li.S").length;
+      };
+      const handleDrowClick = () => {
+        const rows = +document.querySelector("#rows").value;
+        const chairs = +document.querySelector("#chairs").value;
+        clsArena = new Arena(rows, chairs);
+        drowArena();
+      };
+      const drowArena = () => {
+        resetHall();
+        ToggleCheckOut();
+        console.log({ getArenaSataus: clsArena.getArenaSataus });
+        for (const [row, chairs] of Object.entries(clsArena.getArenaSataus)) {
+          console.log({ row, chairs });
+
+          const newRow = document.createElement("li");
+          const newRowSpan = document.createElement("span");
+          newRowSpan.classList.add("row");
+          newRowSpan.innerText = row;
+          newRow.appendChild(newRowSpan);
+          const newChairsList = document.createElement("ol");
+          newChairsList.classList.add("chairs");
+          for (const [idx, chair] of Object.entries(chairs)) {
+            console.log({ idx, chair });
+
+            const newChair = document.createElement("li");
+            const id = ["c", row, idx].join("-");
+            newChair.id = id;
+            newChair.classList.add(chair);
+            newChair.innerText = idx;
+            newChairsList.appendChild(newChair);
+            newChair.addEventListener("click", () => {
+              ToggleSelect(id);
+            });
+            console.log({ row, chair: chair.chair, idx });
+          }
+          newRow.appendChild(newChairsList);
+          document.querySelector("#hall ol").appendChild(newRow);
+        }
+      };
+      const resetHall = () => {
+        while (document.querySelector("#hall ol").children.length) {
+          document.querySelector("#hall ol").children[0].remove();
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto Slab", sans-serif;
+  line-height: 1.5;
+
+  color: #ebe7ef;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Caprasimo", cursive;
+  font-size: 3rem;
+  margin: 0 auto 3rem auto;
+  color: #fb3cde;
+}
+
+#arena-form,
+#hall,
+div.stage {
+  max-width: 45rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background: linear-gradient(#480b38, #281723);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#arena-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+#arena-form li {
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+  border: 2px solid transparent;
+}
+#arena-form button {
+  width: 5rem;
+  border: solid 1px #e9aed5;
+  border-radius: 5px;
+  background: #480b38;
+  color: #c378ab;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+#arena-form button:hover {
+  color: #f831ca;
+}
+
+#arena-form input {
+  font: inherit;
+  font-size: 1rem;
+  width: 3rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.25rem;
+  background-color: #e9aed5;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 4px;
+}
+button#checkout {
+  width: 5rem;
+  border: solid 1px #e9aed5;
+  border-radius: 5px;
+  background: #480b38;
+  color: #c378ab;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.25rem;
+  text-align: center;
+}
+button#checkout:disabled {
+  border: none;
+  cursor: not-allowed;
+}
+#hall {
+  overflow: auto;
+}
+
+div.stage {
+  background: linear-gradient(#480b0b, #281718);
+  margin: 2rem auto;
+  padding: 0;
+  text-align: center;
+}
+#hall ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#hall li span.row {
+  background-color: #f831ca;
+  color: #480b38;
+  min-width: 30px;
+  display: inline-block;
+  text-align: center;
+}
+#hall ol.chairs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+#hall ol.chairs li {
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  left: 35px;
+  top: -25;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  font-size: small;
+  min-width: 25px;
+}
+#hall li.O {
+  background-color: lime;
+}
+#hall li.X {
+  background-color: purple;
+  cursor: not-allowed;
+}
+#hall li.S {
+  background-color: blue;
+}
