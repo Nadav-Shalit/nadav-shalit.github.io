@@ -137,6 +137,12 @@ h1 {
   font-size: 1rem;
   color: #e1dec7;
 }
+#players h5 {
+  color: red;
+  border-radius: 3px;
+  padding: 0 2px;
+  height: 12px;
+}
 
 ol {
   list-style: none;
