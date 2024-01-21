@@ -167,25 +167,32 @@ div.stage {
 }
 #hall ol.chairs li {
   border: 2px solid black;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   position: relative;
   left: 35px;
+  width: 30px;
+  height: 30px;
   top: -25;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   color: black;
   font-size: small;
-  min-width: 25px;
   cursor: pointer;
+  background-repeat: no-repeat;
+  font-size: 10px;
+  background-size: 30px;
+  background-position: center;
+  vertical-align: bottom;
+  background-image: url(seat.png);
 }
-li.O {
-  background-color: lime;
+#hall li.O {
+  background-color: #0db10d;
 }
-li.X {
+#hall li.X {
   background-color: purple;
   cursor: not-allowed !important;
 }
-li.S {
+#hall li.S {
   background-color: blue;
 }
