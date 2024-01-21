@@ -21,7 +21,6 @@ export default function Player({
     });
   }
   function handleInput(e) {
-    // console.log({ target: e.target, val: e.target.value });
     setPlayerName(e.target.value);
     onUpdatePlayerName(symbol, e.target.value);
   }
@@ -34,7 +33,6 @@ export default function Player({
             <input
               placeholder={playerName}
               value={playerName}
-              // onLoad={onInputLoad}
               onFocus={onInputFocus}
               onInput={handleInput}
               type="text"
