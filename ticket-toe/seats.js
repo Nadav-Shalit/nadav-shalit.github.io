@@ -13,7 +13,6 @@ class Arena {
   get getArenaAvailabeCapacty() {
     return this.calcArena();
   }
-
   //Setter
   set soldChair(chairId) {
     const [c, row, chair] = chairId.split("-");
@@ -27,6 +26,34 @@ class Arena {
     const [c, row, chair] = chairId.split("-");
     this._arenaStaus[row][chair] = "O";
   }
+  validSelect() {
+    let flag = false;
+    Object.entries(this._arenaStaus).map((row) => {
+      const [rowNum, chairs] = row;
+      if (Object.values(chairs).includes("S")) {
+        const soldChairs = this.getRowStatus(chairs, "X");
+        const avialbelChairs = this.getRowStatus(chairs, "O");
+        const savedChairs = this.getRowStatus(chairs, "S");
+
+        console.log({
+          rowNum,
+          rowLen: this.chairs,
+          chairs,
+          soldChairs,
+          savedChairs,
+          avialbelChairs,
+        });
+      }
+    });
+    return flag;
+  }
+  getRowStatus(chairs, status = null) {
+    return Object.keys(chairs).filter((el) => {
+      if (status) {
+        if (status === chairs[el]) return el;
+      }
+    });
+  }
 
   calcArena() {
     const capacity = this.rows * this.chairs;
@@ -36,21 +63,9 @@ class Arena {
 
     Object.entries(this._arenaStaus).map((row) => {
       const [rowNum, chairs] = row;
-
-      Object.entries(chairs).map((chr) => {
-        const [chairNum, value] = chr;
-        switch (value) {
-          case "O":
-            availablesChairs++;
-            break;
-          case "X":
-            soldChairs++;
-            break;
-          case "S":
-            savedChairs++;
-            break;
-        }
-      });
+      availablesChairs += this.getRowStatus(chairs, "O").length;
+      soldChairs += this.getRowStatus(chairs, "X").length;
+      savedChairs += this.getRowStatus(chairs, "S").length;
     });
     // console.log({ availablesChairs, soldChairs, savedChairs });
     const capacityPct = Math.floor((1 - availablesChairs / capacity) * 100);

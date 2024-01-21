@@ -37,15 +37,21 @@
           <progress id="capacity" value="0" max="0"></progress>
           <span class="capacity"></span>
         </div>
-        <div>
-          <button id="checkout" onclick="validCheckout()" disabled>
-            Checkout
-          </button>
-        </div>
       </div>
-
+      <div class="checkout">
+        <button id="checkout" onclick="validCheckout()" disabled>
+          Checkout
+        </button>
+      </div>
       <div class="stage">
         <h5>stage</h5>
+      </div>
+      <div id="legand">
+        <ul>
+          <li class="X">Sold</li>
+          <li class="O">Avialable</li>
+          <li class="S">Saved</li>
+        </ul>
       </div>
       <div id="hall">
         <ol></ol>

@@ -36,7 +36,7 @@ header h1 {
 #hall,
 div.stage {
   max-width: 45rem;
-  margin: 3rem auto;
+  margin: 1rem auto;
   padding: 2rem;
   border-radius: 6px;
   background: linear-gradient(#480b38, #281723);
@@ -88,7 +88,21 @@ div.stage {
   text-transform: uppercase;
   margin: 0 4px;
 }
-
+#legand {
+  max-width: 18rem;
+  margin: 0 auto;
+  font-size: 0.75rem;
+}
+#legand ul {
+  color: #000;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+#legand ul li {
+  padding: 3px;
+  border-radius: 3px;
+}
 div.capacity {
   padding: 3px;
   text-align: center;
@@ -102,9 +116,14 @@ span.capacity.soldout {
 progress[value] {
   direction: ltr;
 }
+div.checkout {
+  text-align: center;
+}
 button#checkout {
-  width: 5rem;
-  border: solid 1px #e9aed5;
+  cursor: not-allowed;
+  font-weight: bold;
+  width: 7rem;
+  border: outset 1px #e9aed5;
   border-radius: 5px;
   background: #480b38;
   color: #c378ab;
@@ -160,13 +179,13 @@ div.stage {
   min-width: 25px;
   cursor: pointer;
 }
-#hall li.O {
+li.O {
   background-color: lime;
 }
-#hall li.X {
+li.X {
   background-color: purple;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
-#hall li.S {
+li.S {
   background-color: blue;
 }

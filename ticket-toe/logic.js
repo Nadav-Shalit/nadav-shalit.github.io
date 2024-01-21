@@ -6,7 +6,7 @@ const validChairs = (e) => {
   }
 };
 const validCheckout = () => {
-  const selectedChairs = document.querySelectorAll("li.S");
+  const selectedChairs = document.querySelectorAll("#hall li.S");
   Array.from(selectedChairs).forEach((chr, idx) => {
     clsArena.soldChair = chr.id;
   });
@@ -14,18 +14,20 @@ const validCheckout = () => {
 };
 const ToggleSelect = (id) => {
   const selectedChair = document.querySelector(`#${id}`);
-  if (selectedChair.classList.contains("O")) {
-    selectedChair.classList.replace("O", "S");
-    clsArena.markChair = id;
-  } else {
-    selectedChair.classList.replace("S", "O");
-    clsArena.unMarkChair = id;
+  if (!selectedChair.classList.contains("X")) {
+    if (selectedChair.classList.contains("O")) {
+      clsArena.markChair = id;
+      selectedChair.classList.replace("O", "S");
+    } else {
+      clsArena.unMarkChair = id;
+      selectedChair.classList.replace("S", "O");
+    }
+    ToggleCheckOut();
   }
-  ToggleCheckOut();
 };
 const ToggleCheckOut = () => {
   document.querySelector("button#checkout").disabled =
-    !!!document.querySelectorAll("li.S").length;
+    !!!document.querySelectorAll("#hall li.S").length;
 };
 const handleDrowClick = () => {
   const rows = +document.querySelector("#rows").value;
