@@ -34,12 +34,6 @@ export default function OutputTable({ params }) {
             </tr>
           );
         })}
-        {/* {
-    "year": 1,
-    "interest": 2250,
-    "valueEndOfYear": 18150,
-    "annualInvestment": 900
-    } */}
       </tbody>
     </table>
   );

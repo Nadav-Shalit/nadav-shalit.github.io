@@ -1,7 +1,6 @@
-export default function TextInput({ id, capation, onInput, paramKey }) {
+export default function TextInput({ id, capation, onInput, param }) {
   function hendleInput(e) {
-    console.log({ paramKey, val: e.target.value });
-    onInput(paramKey, +e.target.value);
+    onInput(param.key, +e.target.value);
   }
 
   return (
@@ -10,6 +9,7 @@ export default function TextInput({ id, capation, onInput, paramKey }) {
       <input
         type="number"
         id={id}
+        value={param.val}
         className="form-group"
         onInput={hendleInput}
         required
