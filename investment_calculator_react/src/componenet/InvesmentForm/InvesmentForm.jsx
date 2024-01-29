@@ -11,16 +11,18 @@ export default function InvesmentForm({ onChange }) {
     onChange(key, val);
   }
   return (
-    <div id="user-input">
-      {INPUTS_ARR.map((txt) => (
-        <TextInput
-          key={txt.key}
-          paramKey={txt.key}
-          id={txt.id}
-          capation={txt.capation}
-          onInput={onInputForm}
-        />
-      ))}
-    </div>
+    <section id="user-input">
+      <div className="input-group">
+        {INPUTS_ARR.map((txt) => (
+          <TextInput
+            key={txt.key}
+            paramKey={txt.key}
+            id={txt.id}
+            capation={txt.capation}
+            onInput={onInputForm}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
