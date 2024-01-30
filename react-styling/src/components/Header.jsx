@@ -1,11 +1,17 @@
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
 
-export default function Header() {
+export default function Headr() {
   return (
-    <header>
-      <img src={logo} alt="A canvas" />
-      <h1>ReactArt</h1>
-      <p>A community of artists and art-lovers.</p>
+    <header className="flex flex-col items-center mt-8 md:mt-8 mt-16">
+      <img
+        src={logo}
+        alt="A canvas"
+        className="object-contain mb-8 w-44 h-44 "
+      />
+      <h1 className="text-center  text-xl md:text-4xl uppercase tracking-widest text-amber-600 font-semibold font-title">
+        ReactArt
+      </h1>
+      <p className="text-stone-500">A community of artists and art-lovers.</p>
     </header>
   );
 }
