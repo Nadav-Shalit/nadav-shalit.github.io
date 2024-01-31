@@ -2,7 +2,7 @@ import logo from "../assets/logo.png";
 
 export default function Headr() {
   return (
-    <header className="flex flex-col items-center mt-8 md:mt-8 mt-16">
+    <header className="flex flex-col items-center mt-8 md:mt-16">
       <img
         src={logo}
         alt="A canvas"
