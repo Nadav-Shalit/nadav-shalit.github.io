@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./authInputs.css";
+// import "./authInputs.css";
 import Styled from "./AuthInputs.Styled.jsx";
 import CustomInputs from "./CustomInput.jsx";
 import CustomInputsTw from "./CustomInputTW.jsx";
@@ -24,7 +24,10 @@ export default function AuthInputs() {
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
-    <div id="auth-inputs">
+    <div
+      id="auth-inputs"
+      className="w-full mx-auto max-w-sm p-8 rounded shadow-md bg-gradient-to-tr from-stone-700 to-stone-900"
+    >
       <Styled.StyledDivControls>
         <CustomInputs
           lable="Email"
@@ -42,8 +45,11 @@ export default function AuthInputs() {
           }
         ></CustomInputsTw>
       </Styled.StyledDivControls>
-      <div className="actions">
-        <button type="button" className="text-button">
+      <div className="flex justify-end gap-4">
+        <button
+          type="button"
+          className="p-3 rounded text-amber-500 hover:bg-stone-600"
+        >
           Create a new account
         </button>
         <Styled.StyledButton onClick={handleLogin}>Sign In</Styled.StyledButton>
