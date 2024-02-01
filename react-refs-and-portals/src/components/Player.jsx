@@ -1,10 +1,10 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-export default function Player() {
+export default function Player({ playerName, onSubmit }) {
   const inputPlayer = useRef();
-  const [playerName, setPalyerName] = useState(null);
+  // const [playerName, setPalyerName] = useState(null);
   function hendleSubmit() {
-    setPalyerName(inputPlayer.current.value);
+    onSubmit(inputPlayer.current.value);
     inputPlayer.current.value = "";
   }
   return (

@@ -1,5 +1,6 @@
 import { forwardRef, useRef, useImperativeHandle } from "react";
 import { createPortal } from "react-dom";
+import { getScore } from "../assets/utils.js";
 
 const ResultModal = forwardRef(function ResultModal(
   { result, targetTime, reset },
@@ -8,8 +9,7 @@ const ResultModal = forwardRef(function ResultModal(
   const dialogInnerRef = useRef();
   const isLost = result <= 0;
   const secondLeft = result > 0 ? (result / 1000).toFixed(2) : null;
-  const score = Math.round((1 - result / (targetTime * 1000)) * 100).toFixed(0);
-
+  const score = getScore(result, targetTime);
   //   console.log({ result, isLost, winScore: secondLeft, targetTime, score });
   useImperativeHandle(refProp, () => {
     return {

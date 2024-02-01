@@ -107,6 +107,10 @@ header p {
   box-shadow: 1px 1px 8px rgb(6, 254, 237);
   border-radius: 6px;
 }
+.challenge.pass {
+  background: linear-gradient(180deg, rgb(74, 38, 74), #2e9686);
+  color: plum;
+}
 
 .challenge button {
   margin-top: 1rem;
@@ -132,7 +136,9 @@ header p {
   text-transform: uppercase;
   color: #221c18;
 }
-
+.challenge.pass h2 {
+  color: plum;
+}
 .challenge-time {
   border: 1px solid #ce46a8;
   border-radius: 4px;
