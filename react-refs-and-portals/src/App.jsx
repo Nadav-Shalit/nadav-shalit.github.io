@@ -7,7 +7,7 @@ const GAME_CONFIG = [
   { "Getting serious": 10, score: 0 },
   { "Grown ups": 15, score: 0 },
   { Masters: 17, score: 0 },
-  { God: Math.floor(Math.random() * 50) + 18, score: 0 },
+  { "Hall Of Fame": Math.floor(Math.random() * 50) + 18, score: 0 },
 ];
 function App() {
   const [playerName, setPalyerName] = useState(null);

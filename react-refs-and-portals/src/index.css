@@ -126,7 +126,9 @@ header p {
 .challenge button:hover {
   background: #051715;
 }
-
+.challenge button:disabled {
+  cursor: not-allowed;
+}
 .challenge h2 {
   font-size: 1.1rem;
   letter-spacing: 0.1em;

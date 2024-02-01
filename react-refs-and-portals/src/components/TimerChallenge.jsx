@@ -47,8 +47,11 @@ export default function TimerChallenge({ title, targetTime, setScore }) {
           {targetTime} second{targetTime > 1 && "s"}
         </p>
         <p>
-          <button onClick={isTimerActive ? handleStop : handleStart}>
-            {isTimerActive ? "Stop" : "Start"}
+          <button
+            disabled={isPass && "disabled"}
+            onClick={isTimerActive ? handleStop : handleStart}
+          >
+            {isTimerActive ? "Stop" : !!!isPass ? "Start" : "Success"}
           </button>
         </p>
         <p>
