@@ -1,5 +1,5 @@
 import CustomInput from "../Shared/CustomInput";
-export default function AddEditProject() {
+export default function AddEditProject({ onCreateProject }) {
   return (
     <div className="w-[35rem] mt-16">
       <menu className="flex justify-end items-center gap-4">
