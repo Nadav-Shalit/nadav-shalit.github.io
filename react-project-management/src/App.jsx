@@ -9,20 +9,22 @@ function App() {
     seletedProjectId: undefined,
     projects: [],
   });
-
-  const projectData =
-    !!projectsState.projects.length && projectsState.seletedProjectId >= 0
+  function getProjectData() {
+    return !!projectsState.projects.length &&
+      projectsState.seletedProjectId >= 0
       ? projectsState.projects[projectsState.seletedProjectId]
       : null;
-  console.log(projectData);
-  function handleAddNewProject() {
+  }
+  function handleSetSelectedProject(projectId = undefined) {
+    // console.log("handleSetSelectedProject", { projectId });
     setProjectsState((curState) => {
       const newState = { ...curState };
-      newState.seletedProjectId = null;
+      newState.seletedProjectId = projectId;
       return newState;
     });
   }
   function handleSubmitNewProject(newProjectData) {
+    // console.log("handleSubmitNewProject");
     setProjectsState((curState) => {
       const newState = { ...curState };
       newState.projects = [...newState.projects, newProjectData];
@@ -31,20 +33,43 @@ function App() {
       return newState;
     });
   }
+  function handleDeleteProject(id) {
+    setProjectsState((curState) => {
+      const newState = { ...curState };
+      let projects = [...newState.projects];
+      projects.splice(id, 1);
+      newState.projects = projects;
+      newState.seletedProjectId = undefined;
 
-  console.log(projectsState);
+      return newState;
+    });
+  }
+
+  // console.log(projectsState);
   return (
     <main className="h-screen my-8 flex gap-8">
       <SideBar
-        onCreateProject={handleAddNewProject}
+        onCreateProject={() => handleSetSelectedProject(null)}
+        onSelect={(idx) => handleSetSelectedProject(idx)}
         projectList={projectsState.projects}
+        selectedProjectId={projectsState.seletedProjectId}
       />
-      {projectsState.seletedProjectId === undefined ? (
-        <NoProjects onCreateProject={handleAddNewProject} />
-      ) : projectsState.seletedProjectId === null ? (
-        <AddEditProject onSave={handleSubmitNewProject} />
-      ) : (
-        { projectData } && <ProjectInfo projectData={projectData}></ProjectInfo>
+      {projectsState.seletedProjectId === undefined && (
+        <NoProjects onCreateProject={() => handleSetSelectedProject(null)} />
+      )}
+      {projectsState.seletedProjectId === null && (
+        <AddEditProject
+          onSave={handleSubmitNewProject}
+          onCancel={() => handleSetSelectedProject()}
+        />
+      )}
+      {getProjectData() && (
+        <ProjectInfo
+          projectData={getProjectData()}
+          onCancel={() => handleSetSelectedProject()}
+          onDelete={handleDeleteProject}
+          selectedProjectId={projectsState.seletedProjectId}
+        ></ProjectInfo>
       )}
     </main>
   );
