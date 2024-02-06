@@ -11,6 +11,7 @@ export default function AddEditProject({ onSave, onCancel }) {
     const title = projectTitleRef.current.value;
     const desc = projectDescRef.current.value;
     const dueDate = projectDueDateRef.current.value;
+    const tasks = [];
     console.log("handleSave");
     if (
       title.trim().length === 0 ||
@@ -21,7 +22,7 @@ export default function AddEditProject({ onSave, onCancel }) {
       return;
     }
 
-    onSave({ title, desc, dueDate });
+    onSave({ title, desc, dueDate, tasks });
   }
   return (
     <>

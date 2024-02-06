@@ -1,6 +1,13 @@
 import CustomButton from "../Shared/CustomButton.jsx";
+import Tasks from "../Tasks/Tasks.jsx";
 
-export default function ProjectInfo({ projectData, onCancel, onDelete }) {
+export default function ProjectInfo({
+  projectData,
+  onCancel,
+  onDelete,
+  onAddTask,
+  onDeleteTask,
+}) {
   return (
     <div className="w-[35rem] mt-16">
       <header className="pb-4 mb-4 border-b-2 border-cyan-300">
@@ -33,7 +40,11 @@ export default function ProjectInfo({ projectData, onCancel, onDelete }) {
         <p className="text-blue-400 mb-4">{projectData.dueDate}</p>
         <p className="text-cyan-600 whitespace-pre-wrap">{projectData.desc}</p>
       </header>
-      TASKS
+      <Tasks
+        onAddTask={onAddTask}
+        onDeleteTask={onDeleteTask}
+        tasksList={projectData.tasks}
+      ></Tasks>
     </div>
   );
 }
