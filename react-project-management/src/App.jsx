@@ -33,11 +33,11 @@ function App() {
       return newState;
     });
   }
-  function handleDeleteProject(id) {
+  function handleDeleteProject() {
     setProjectsState((curState) => {
       const newState = { ...curState };
       let projects = [...newState.projects];
-      projects.splice(id, 1);
+      projects.splice(curState.seletedProjectId, 1);
       newState.projects = projects;
       newState.seletedProjectId = undefined;
 
@@ -68,7 +68,6 @@ function App() {
           projectData={getProjectData()}
           onCancel={() => handleSetSelectedProject()}
           onDelete={handleDeleteProject}
-          selectedProjectId={projectsState.seletedProjectId}
         ></ProjectInfo>
       )}
     </main>

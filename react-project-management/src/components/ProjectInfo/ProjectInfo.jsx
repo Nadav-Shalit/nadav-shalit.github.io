@@ -1,11 +1,6 @@
 import CustomButton from "../Shared/CustomButton.jsx";
 
-export default function ProjectInfo({
-  projectData,
-  onCancel,
-  onDelete,
-  selectedProjectId,
-}) {
+export default function ProjectInfo({ projectData, onCancel, onDelete }) {
   return (
     <div className="w-[35rem] mt-16">
       <header className="pb-4 mb-4 border-b-2 border-cyan-300">
@@ -27,9 +22,7 @@ export default function ProjectInfo({
             </CustomButton>
           </li> */}
           <li>
-            <CustomButton onClick={() => onDelete(selectedProjectId)}>
-              Delete
-            </CustomButton>
+            <CustomButton onClick={onDelete}>Delete</CustomButton>
           </li>
         </menu>
         <div className=" flex items-center justify-between">
