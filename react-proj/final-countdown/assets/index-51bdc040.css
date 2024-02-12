@@ -200,7 +200,7 @@ header p {
   }
 }
 
-.breadcrumb a {
+a.breadcrumb {
   font-size: medium;
   color: white;
 }

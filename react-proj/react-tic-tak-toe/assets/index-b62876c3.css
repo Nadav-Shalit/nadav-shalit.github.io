@@ -317,8 +317,7 @@ ol {
     transform: scale(1);
   }
 }
-.breadcrumb,
-.breadcrumb-item {
+a.breadcrumb {
   font-size: medium;
   color: black;
 }
