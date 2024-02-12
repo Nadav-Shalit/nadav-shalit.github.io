@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="js/game.js"></script>
+    <style>
+        body {
+                font-size:22px;
+                font-family: Calibri;
+                color:black;
+        }
+        a.reset{
+            font-size:small;
+
+        }
+        div.main {
+            width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            border: 2px outset lightgray;
+            border-radius: 20px;
+         
+        }
+
+        div.players {
+            padding: 5px;
+            background-color:#B0B0B0;
+            border-radius:15px 15px  0px 0px;
+        }
+
+        div.board {
+            
+            min-height:290px;
+            height:auto;
+            width: 100%;
+            border:1px solid black;
+            text-align: center;
+            vertical-align: middle;
+            
+        }
+        div.start {                
+                
+                padding:2px;
+                background-color:#B0B0B0;
+                border-radius:0px 0px  15px 15px;
+                
+
+            }
+        div.HallOfFame{
+            float:left;
+            width:auto; 
+            height:auto; 
+            border:none;
+			min-height:100px;
+			max-height:400px;
+			overflow-y: scroll;
+			margin:0;
+
+
+        }
+        input {
+            width: 250px;
+            
+            border-radius: 10px;
+            font-size:inherit;
+            font-family:inherit;
+            color:inherit;
+            
+        }
+
+            input.btnMove {
+                width: 80px;
+                height: 80px;
+                border: outset 1px lightgray;
+                border-radius: 5px;
+            }
+
+            input.playerX {
+                
+                background-color: lightgreen;
+            }
+
+            input.player0 {
+                
+                background-color: lightskyblue;
+            }
+			input.playerWin {
+                
+                background-color: gold;
+				color:black;
+				
+            }
+            input.start {
+                background-color:white;
+                width:100px;
+            }
+        lable.msg{
+            font-size:15px;
+            height:20px;
+            border-radius:5px;
+            padding:0px 2px 1px 2px;
+            vertical-align:middle;
+        }   
+         
+       lable.err{
+            font-size:15px;
+            color:red;
+        }
+        lable.playerX {
+            background-color: lightgreen;
+        }   
+        lable.player0 {
+            background-color: lightskyblue;
+        }
+
+        table.tblTikTacToe {
+            vertical-align:middle;
+            text-align:center;
+            border-spacing: 5px;
+            padding: 5px;
+            margin:auto;
+            
+        }
+        
+         li.playerX {
+			font-size:12px;
+            background-color: lightgreen;
+        }   
+        li.player0 {
+			font-size:12px;
+            background-color: lightskyblue;
+        }
+    </style>
+
+</head>
+
+<body onload="LoadWinners();">
+  	<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="/">Home</a></li>			
+		</ol>
+    <div class="HallOfFame" >
+        <ol id="ListHallOfFame" ></ol>
+    </div>
+    <div class="main">
+
+        <div id="players" class="players">
+
+            <input type="button" onclick="SetPlayer(this,'X')" value="Enter name for [X] player" id="player_X" playername="" sign="X" class="txtMove playerX" />&nbsp;&nbsp;VS&nbsp;&nbsp;<input type="button" onclick="SetPlayer(this,'0')" value="Enter name for [0] player" id="player_0" playername="" sign="0" class="txtMove player0" />
+
+        </div>
+        <div class="board">
+            <table id="tblTikTacToe" class="tblTikTacToe"></table>
+        </div>
+        <div class="start">
+            <input type="button" onclick="StartGame()" value="Play" class="start" id="btnPlay" />
+            <br /><lable id="lblMsg" class="msg"></lable><br />
+            <a href="javascript:ResetGame();" class="reset">Reset game</a><br />
+        </div>
+    </div>
+</body>
+</html>
