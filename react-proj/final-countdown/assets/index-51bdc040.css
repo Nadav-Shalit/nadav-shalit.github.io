@@ -199,8 +199,8 @@ header p {
     opacity: 0.5;
   }
 }
-.breadcrumb,
-.breadcrumb {
+
+.breadcrumb a {
   font-size: medium;
   color: white;
 }
