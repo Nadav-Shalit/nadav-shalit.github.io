@@ -1,4 +1,4 @@
-import imgSrc from "../../../assets/seatgeek-def_280-210.png";
+import imgSrc from "https://www.ndv.co.il/react-proj/seatgeek-api/assets/seatgeek-def_280-210.png";
 export default function TaxonomyMenu({ data, filter, parentId }) {
   const classesActive =
     "inline-block p-2 bg-red-500 text-black rounded-t-lg active  ";
