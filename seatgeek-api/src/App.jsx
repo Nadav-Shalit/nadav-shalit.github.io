@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <Header></Header>
-      <main className="h-screen my-4 flex gap-2">
-        <aside className="px-8 py-16 bg-slate-900 text-cyan-50 rounded-r-lg w-1/3 md:w-72">
+      <main className="h-screen xl:my-4 flex gap-2">
+        <aside className="xl:px-8 xl:py-16 py-1 px-2 bg-slate-900 text-cyan-50 rounded-r-lg w-1/3 xl:w-72">
           <SideBar
             data={menuArr}
             navigate={handleNavigate}
