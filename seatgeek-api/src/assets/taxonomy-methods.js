@@ -1,4 +1,4 @@
-import imgSrc from "https://www.ndv.co.il/react-proj/seatgeek-api/seatgeek-def_280-210.png";
+import imgSrc from "https://www.ndv.co.il/react-proj/seatgeek-api/assets/seatgeek-def_280-210.png";
 
 export default async function getTaxonomies() {
   const taxData = [];
