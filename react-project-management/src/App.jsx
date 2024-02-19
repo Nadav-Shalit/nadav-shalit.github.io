@@ -55,19 +55,21 @@ function App() {
     });
   }
   function deleteTask(id) {
+    console.log("deleteTask", { id });
     setProjectsState((curState) => {
+      console.log("deleteTask", { id });
       const newState = { ...curState };
       const projects = [...newState.projects];
       const tasks = [...projects[curState.seletedProjectId].tasks];
-      console.log({ tasks });
+      // console.log({ tasks });
       tasks.splice(id, 1);
-      console.log({ tasks });
+      // console.log({ tasks });
 
       newState.projects[curState.seletedProjectId].tasks = tasks;
       return newState;
     });
   }
-  console.log(projectsState);
+  // console.log(projectsState);
   return (
     <main className="h-screen my-8 flex gap-8">
       <SideBar

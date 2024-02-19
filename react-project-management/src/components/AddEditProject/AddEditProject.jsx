@@ -27,9 +27,8 @@ export default function AddEditProject({ onSave, onCancel }) {
   return (
     <>
       <Modal ref={modalRef} buttonCaption="Close">
-        {console.log("line 29")}
         <h2 className="text-center py-2 text-cyan-100 bg-cyan-800 font-bold">
-          Create New Project {new Date().toLocaleTimeString()}
+          Create New Project
         </h2>
         <p className="p-3 mb-3 text-cyan-800">
           Invaid new project values, please verfiy input
