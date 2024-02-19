@@ -1,7 +1,12 @@
 import CustomButton from "../Shared/CustomButton.jsx";
 import NewTasks from "./NewTasks.jsx";
-
+import { TrashIcon } from "@heroicons/react/24/solid";
 export default function Tasks({ onAddTask, onDeleteTask, tasksList }) {
+  function handleDeleteClick(idx) {
+    console.log(idx);
+
+    onDeleteTask(idx);
+  }
   return (
     <section>
       <h2 className="text-2xl font mb-4 text-cyan-700">Tasks</h2>
@@ -17,8 +22,11 @@ export default function Tasks({ onAddTask, onDeleteTask, tasksList }) {
                 <span>
                   {idx}-{tsk}
                 </span>
-                <button className="px-3 " onClick={() => onDeleteTask(idx)}>
-                  Delete
+                <button
+                  className="px-3 "
+                  onClick={() => handleDeleteClick(idx)}
+                >
+                  <TrashIcon className="w-6 h-6" />
                 </button>
               </li>
             );
