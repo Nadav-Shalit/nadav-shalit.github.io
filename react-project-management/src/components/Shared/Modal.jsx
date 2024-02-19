@@ -4,7 +4,6 @@ import CustomButton from "./CustomButton.jsx";
 
 const Modal = forwardRef(function Modal({ children, buttonCaption }, refProp) {
   const dialogRef = useRef();
-  console.log("line 11");
   useImperativeHandle(refProp, () => {
     return {
       open() {
@@ -16,7 +15,7 @@ const Modal = forwardRef(function Modal({ children, buttonCaption }, refProp) {
   return createPortal(
     <dialog
       ref={dialogRef}
-      className="backdrop:bg-cyan-900/90  flex flex-col pb-5 border-cyan-200 rounded border-2"
+      className="backdrop:bg-cyan-900/90  pb-5 border-cyan-200 rounded border-2"
     >
       {children}
       <form method="dialog" className="flex justify-center">
