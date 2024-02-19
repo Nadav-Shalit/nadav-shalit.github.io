@@ -1,5 +1,6 @@
 import CustomButton from "../Shared/CustomButton.jsx";
 import Tasks from "../Tasks/Tasks.jsx";
+import { TrashIcon } from "@heroicons/react/24/solid";
 
 export default function ProjectInfo({
   projectData,
@@ -8,6 +9,8 @@ export default function ProjectInfo({
   onAddTask,
   onDeleteTask,
 }) {
+  console.log("load", projectData.tasks);
+
   return (
     <div className="w-[35rem] mt-16">
       <header className="pb-4 mb-4 border-b-2 border-cyan-300">
@@ -29,7 +32,9 @@ export default function ProjectInfo({
             </CustomButton>
           </li> */}
           <li>
-            <CustomButton onClick={onDelete}>Delete</CustomButton>
+            <CustomButton onClick={onDelete}>
+              <TrashIcon className="w-6 h-6" />
+            </CustomButton>
           </li>
         </menu>
         <div className=" flex items-center justify-between">
