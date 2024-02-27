@@ -17,14 +17,11 @@
 ul.tasks {
   display: flex;
   list-style: none;
-  padding: 15px 2px;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 70px;
+  justify-content: space-between;
 }
 ul.tasks li {
   margin: 3px;
-  height: 160px;
 }
 ul.tasks li div.polaroid img {
   width: 100%;
