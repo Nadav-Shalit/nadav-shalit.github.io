@@ -19,13 +19,13 @@ ul.tasks {
   list-style: none;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
 }
 ul.tasks li {
   margin: 3px;
 }
 ul.tasks li div.polaroid img {
   width: 100%;
-  height: 160px;
 }
 ul.tasks li div.polaroid {
   width: 250px;
@@ -37,7 +37,6 @@ ul.tasks li a {
 }
 
 ul.tasks li div.img-name {
-  /* background-color: rgb(231, 236, 246); */
   text-align: center;
   padding: 5px 5px;
   font-size: larger;
