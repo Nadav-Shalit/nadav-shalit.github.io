@@ -11,148 +11,108 @@
    ========================================================================== */
 
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.4;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * These selection rule sets have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+body {
+  color: white;
+  background-color: #050027;
 }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 #tasks-body {
-       width: 85%;
-       margin: 0 auto;
-   }
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 2px 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(180, 9, 228, 1) 36%,
+    rgba(191, 10, 240, 1) 64%,
+    rgba(2, 0, 36, 1) 100%
+  );
+}
 
- h1 {
+h1 {
   font-weight: normal;
   border-bottom: 1px solid;
- }
+}
 
 div.todo-list {
   margin: 0 auto;
-  background-color: aliceblue;
+  background-color: rgb(46, 43, 46);
   width: 70%;
-  padding: 5px;
-}
-
-div.task {
-  border: solid 1px lightblue;
-  padding: 2px;
-  margin: 2px 0px;
+  padding: 25px 15px;
   border-radius: 5px;
 }
 
-div.task div  {
+div.task {
+  /* border: solid 1px purple; */
+  padding: 2px;
+  margin: 2px 0px;
+  border-radius: 5px;
+  color: #fe0ef6;
+}
+
+div.task div {
   padding: 0 2px;
 }
 
-div.task button  {
+div.task button {
   border: none;
   background-color: transparent;
   padding: 1px;
 }
-
+.form-inline {
+  display: flex;
+  flex-flow: row;
+  padding: 15px;
+  background-color: #000;
+  border-radius: 5px;
+}
 .form-inline .form-control {
-    height: 22px;
-    width: 150px;
-    margin-right:5px
+  height: 22px;
+  width: 150px;
+  margin-right: 5px;
+  position: relative;
+  background-color: #fadef9;
+  color: black;
 }
 #msg {
-color:red;  
+  color: red;
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  background-color: black;
 }
 span.task {
   font-weight: bold;
+  color: white;
+  font-size: larger;
 }
 
-span.owner {
-  color: navy;
+span.badge.owner {
+  color: rgb(237, 17, 211);
+  background-color: #000;
+  margin-left: 10px;
+  font-size: small;
 }
-
-
-
-
-
-
-
-
-
-
+button {
+  background-color: transparent !important;
+  border: none !important;
+}
+span.glyphicon {
+  padding: 0px 3px;
+  color: #fe0ef6;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -162,7 +122,7 @@ span.owner {
  */
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /*
@@ -171,14 +131,14 @@ span.owner {
  */
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*
@@ -189,12 +149,12 @@ span.owner {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /*
@@ -202,7 +162,7 @@ span.owner {
  */
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /*
@@ -219,12 +179,12 @@ span.owner {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -234,14 +194,14 @@ span.owner {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+  /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
 /* ==========================================================================
@@ -251,72 +211,72 @@ span.owner {
    ========================================================================== */
 
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-    /*
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
 
-    /*
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
-        display: table-header-group;
-    }
+  thead {
+    display: table-header-group;
+  }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-    img {
-        max-width: 100% !important;
-    }
+  img {
+    max-width: 100% !important;
+  }
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }

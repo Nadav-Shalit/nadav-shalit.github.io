@@ -35,13 +35,19 @@ ul.tasks li div.polaroid {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
+ul.tasks li a {
+  text-decoration: none;
+}
 
 ul.tasks li div.img-name {
-  background-color: rgb(231, 236, 246);
+  /* background-color: rgb(231, 236, 246); */
   text-align: center;
   padding: 5px 5px;
   font-size: larger;
   font-weight: bolder;
+}
+ul.tasks li div.img-name:hover {
+  background-color: aliceblue;
 }
 ul.tasks li span.react-icon {
   background: url(/images/react-js-icon.png);
@@ -65,6 +71,34 @@ ul.tasks li span.js-icon {
 
 ul.tasks li span.ts-icon {
   background: url(/images/typescript-icon.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+ul.tasks li span.jq-icon {
+  background: url(/images/jquery-icon.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+ul.tasks li span.bs-icon {
+  background: url(/images/bootstrap-icon.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 24px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+}
+
+ul.tasks li span.tw-icon {
+  background: url(/images/tailwind-icon.png);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 24px;
