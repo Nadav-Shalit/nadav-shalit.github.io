@@ -9,9 +9,9 @@ var APP = {};
   // template of input text box for new tasks
   var formTemplate = function () {
     var txtTask =
-      "<label class='sr-only' for='txtTaskDesc' >task</label><input type='text' id='txtTaskDesc' class='task form-control' placeholder='Task description'/>";
+      "<label class='sr-only' for='txtTaskDesc' >task</label><input type='text' id='txtTaskDesc' class='task form-control' placeholder='Description'/>";
     var txtOwner =
-      "<label class='sr-only' for='txtOwner' >task</label><input type='text' id='txtOwner' class='owner form-control' placeholder='Task owner'/>";
+      "<label class='sr-only' for='txtOwner' >task</label><input type='text' id='txtOwner' class='owner form-control' placeholder='Owner'/>";
     var divAlert = "<div id='msg' ></div>";
     return (
       "<div class='form-inline'>" +
