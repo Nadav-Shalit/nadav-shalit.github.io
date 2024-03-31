@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3LXR2WW27B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3LXR2WW27B");
+    </script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Nadav Shalit - Web developer</title>
@@ -31,15 +45,6 @@
                 >Tasks <span class="caret"></span
               ></a>
               <ul class="dropdown-menu">
-                <li><a href="/calc/index.html">Calculator</a></li>
-                <li><a href="/tasks-list/index.html">Todo List</a></li>
-                <li><a href="/react-notes/index.html">React Notes</a></li>
-                <li><a href="/csv-parser/index.html">CSV Parser</a></li>
-                <li>
-                  <a href="/react-proj/react-tic-tak-toe/index.html"
-                    >React - tic-tak-toe</a
-                  >
-                </li>
                 <li>
                   <a href="/react-proj/final-countdown/index.html"
                     >React - final countdown challenge</a
@@ -48,6 +53,15 @@
                 <li>
                   <a href="/react-proj/react-hit-and-match/index.html"
                     >React - Hit & Match</a
+                  >
+                </li>
+                <li><a href="/tasks-list/index.html">Todo List</a></li>
+                <li><a href="/react-notes/index.html">React Notes</a></li>
+                <li><a href="/calc/index.html">Calculator</a></li>
+                <li><a href="/csv-parser/index.html">CSV Parser</a></li>
+                <li>
+                  <a href="/react-proj/react-tic-tak-toe/index.html"
+                    >React - tic-tak-toe</a
                   >
                 </li>
                 <li hidden>
@@ -122,72 +136,26 @@
     <div class="container">
       <ul class="tasks">
         <li>
-          <a href="/calc/index.html">
+          <a href="/react-proj/react-hit-and-match/index.html">
             <div class="polaroid">
-              <img src="images/calc.png" />
+              <img src="images/hit_and_match.png" />
               <div class="img-name">
-                <p>Calculator</p>
-                <span class="js-icon"></span>
+                <p>Hit & Match</p>
+                <span title="React" class="react-icon"></span>
+                <span title="TypeScript" class="ts-icon"></span>
+                <span title="Tailwind" class="tw-icon"></span>
               </div>
             </div>
           </a>
         </li>
-        <li>
-          <a href="/csv-parser/index.html">
-            <div class="polaroid">
-              <img src="images/CSV-parser.png" />
-              <div class="img-name">
-                <p>CSV Parser</p>
-                <span class="js-icon"></span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="tasks-list/index.html">
-            <div class="polaroid">
-              <img src="images/ToDo.png" />
-              <div class="img-name">
-                <p>To Do List</p>
-                <span class="js-icon"></span>
-              </div>
-            </div>
-          </a>
-        </li>
-      </ul>
-      <ul class="tasks">
         <li>
           <a href="/react-proj/final-countdown/index.html">
             <div class="polaroid">
               <img src="images/countdown.png" />
               <div class="img-name">
                 <p>Final Countdown</p>
-                <span class="react-icon"></span>
-                <span class="js-icon"></span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="/react-proj/react-hit-and-match/index.html">
-            <div class="polaroid">
-              <img src="images/hit_and_match.png" />
-              <div class="img-name">
-                <p>Hit & Match</p>
-                <span class="react-icon"></span>
-                <span class="ts-icon"></span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="/react-notes/index.html">
-            <div class="polaroid">
-              <img src="images/Notes.png" />
-              <div class="img-name">
-                <p>PostIt Notes</p>
-                <span class="react-icon"></span>
-                <span class="js-icon"></span>
+                <span title="React" class="react-icon"></span>
+                <span title="JavaScript" class="js-icon"></span>
               </div>
             </div>
           </a>
@@ -198,8 +166,54 @@
               <img src="images/TicTacToe.png" />
               <div class="img-name">
                 <p>Tic-Tac-Toe</p>
-                <span class="react-icon"></span>
-                <span class="js-icon"></span>
+                <span title="React" class="react-icon"></span>
+                <span title="JavaScript" class="js-icon"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="tasks-list/index.html">
+            <div class="polaroid">
+              <img src="images/ToDo.png" />
+              <div class="img-name">
+                <p>To Do List</p>
+                <span title="JQuery" class="jq-icon"></span>
+                <span title="Bootstrap" class="bs-icon"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/calc/index.html">
+            <div class="polaroid">
+              <img src="images/calc.png" />
+              <div class="img-name">
+                <p>Calculator</p>
+                <span title="JavaScript" class="js-icon"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/react-notes/index.html">
+            <div class="polaroid">
+              <img src="images/Notes.png" />
+              <div class="img-name">
+                <p>Post-It Notes</p>
+                <span title="React" class="react-icon"></span>
+                <span title="JavaScript" class="js-icon"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/csv-parser/index.html">
+            <div class="polaroid">
+              <img src="images/CSV-parser.png" />
+              <div class="img-name">
+                <p>CSV Parser</p>
+                <span title="JavaScript" class="js-icon"></span>
               </div>
             </div>
           </a>
