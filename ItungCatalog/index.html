@@ -1,0 +1,208 @@
+<html lang="he">
+<title>מחשבון תכולת משטחים</title>
+
+<head>
+  	<meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+
+
+    <script src="assets\js\data.js"></script>
+    <script src="assets\js\main.js"></script>
+
+
+</head>
+<style>
+     /* Custom, iPhone Retina */
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   
+    .calc-form {
+        height: 220px  !important;
+    }
+    button, select {
+            color: #fdc62c !important;
+            background-color: black !important;
+            border: solid 2px #fff !important;
+            min-width: 140px;
+            font-size: 44px !important;
+            height: 75px !important;
+            }
+        label {font-size: 50px !important; }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+    .calc-form {
+        height:initial  !important;
+    }
+    button, select {
+            color: #fdc62c !important;
+            background-color: black !important;
+            border: solid 2px #fff !important;
+            min-width: 80px;
+            font-size: 22px !important;
+            height: auto !important;
+            }
+            label {font-size: initial !important;}
+    } 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .calc-form {
+        height:initial  !important;
+    }
+    
+    button, select {
+            color: #fdc62c !important;
+            background-color: black !important;
+            border: solid 2px #fff !important;
+            min-width: 80px;
+            font-size: 22px !important;
+            height: auto !important;
+            }
+            label {font-size: initial !important;}
+        }       
+       
+        
+        .container {
+            width: 99%;
+            font-size: 30px;
+            }
+            .form-control {
+              font-size: 25px;   
+              padding: 0;   
+             
+            }
+           
+        
+        h1 {
+            background-color: #fdc62c;
+            border-radius:5px;
+            text-align: center; 
+        }
+       
+        .btn.disabled, .btn[disabled] {
+        background-color: #b59436 !important;
+       }
+       .calc-form {
+        background-color: #fdc62c;
+        margin-bottom: 0px;       
+        height: 133px;
+      
+       }
+       .form-control {
+        margin: 6px 0;
+       }
+       .btn {
+           padding: 0 12px;
+       }
+       .header {
+        margin: 10px 5px;
+        height: 180px;
+        background-image: url(assets/img/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+       }
+       .slogen {
+        height: 70px;
+    background-image: url(assets/img/slogen.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: #fdc613;
+    margin: 0 auto;
+    width: 99%;
+
+       }
+      h2 {
+        border: solid 1px;
+        padding: 9px 0;
+        border-width: 2px 0;
+      }
+      p.comments {
+        /*color: red;*/
+      }
+      p.comments label {
+        color: red;
+        font-size: xx-large !important;
+      }
+</style>
+<body dir="rtl">
+    <script id="blogPostTemplate" type="text/x-jQuery-tmpl">
+            <div class="col-sm-12 well">    
+            <h1><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span> עובי: <b>${thick}</b> &nbsp;&nbsp;&nbsp; <span class="glyphicon glyphicon-resize-vertical" aria-hidden="true">גובה:<b>${height}</b>&nbsp;&nbsp;&nbsp; אורך:<b>${length}</b></h1>
+            <p>יחידות במשטח: <b>${unitsInPallte}</b></p>
+            <p>יחידות בקוב: <b>${unitsInM3}</b></p>
+            <p>נפח משטח בקוב: <b>${volumeOfPallteM3}</b></p>
+            <p>מ"ר בקוב: <b>${quantityInM2}</b></p>
+            <p> מ"ר במשטח: <b>${(volumeOfPallteM3*quantityInM2).toFixed(2)}</b></p>
+            <p class="comments" >הערות:<label>${comments}</label></p>
+            <p class="option" >[#${option}]</p>
+            </div>
+            </script>
+    <div class="container">
+        <div class="header">                   
+        </div>  
+        <div>
+               
+                <h2 class="smaller">מידות וכמויות</h2>
+               
+        </div>
+        <div class="container" style="padding:10px;  background-color: black">
+                
+            <div class="form-inline text-center well calc-form" >              
+                <div>                         
+                <div class="form-group">
+                    <label for="txtThickness"><span class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"></span> עובי:</label>                    
+                    <select class="form-control" name="drpThickness" id="drpThickness"></select>
+                </div>
+                <div class="form-group">
+                    <label for="txtHeight"><span class="glyphicon glyphicon-resize-vertical" aria-hidden="true"></span>גובה:</label>
+                    <select class="form-control" name="drpHeight" id="drpHeight" disabled>
+                        <option value="0">בחר</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label >אורך:</label>
+                    <button data-value="50" class="btn btn-default btn-md" disabled >50</button> <button data-value="60" class="btn btn-default btn-md" disabled>60</button>
+                </div>
+                
+            </div>
+            <div id="alert" class="alert alert-danger text-center"></div>
+        </div>
+        </div>
+        
+        <div class="container results" >
+            <div class="row" id="results">
+
+            </div>
+        </div>
+        <div class="slogen">
+               
+            </div>
+    </div>
+    <script type="text/javascript">
+         yc = new ytongCalc(); 
+        Init(yc);
+    </script>
+</body>
+
+</html>
