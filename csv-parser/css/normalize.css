@@ -416,9 +416,26 @@ optgroup {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
 }
 
-td,
+thead {
+  display: table-header-group;
+  width: 90%;
+}
+
 th {
-  padding: 0;
+  background-image: linear-gradient(#94a3f8, #bfdbee);
+  padding: 1px;
+  text-align: center !important;
+  color: black;
+}
+tbody tr:nth-child(2n + 1) {
+  background: #d9e7f3;
+}
+th {
+  padding: 1px;
+}
+td {
+  padding: 2px 5px !important;
 }
