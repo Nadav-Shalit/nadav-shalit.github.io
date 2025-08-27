@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(savePosition, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function savePosition(position) {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        
+        // Fill hidden fields
+        document.getElementById("lat").value = lat;
+        document.getElementById("lng").value = lng;
+          // Auto-submit
+          console.log("Location fetched: " + lat + ", " + lng + ". Now submitting the form.");
+        document.getElementById("form").submit();
+      }
+
+      function showError(error) {
+        alert("Unable to fetch location: " + error.message);
+      }
+    </script>
+  </head>
+  <body onload="getLocation()">
+    <form id="form" method="POST" action="https://hooks.airtable.com/workflows/v1/genericWebhook/appFecZZKWSpUQYKD/wflrzWW6kiC49uqXM/wtrHvbFm8KHAa0FXq">
+      <!-- Replace entry IDs with your Form field IDs -->
+      <input type="hidden" name="entry.LAT_FIELD_ID" id="lat">
+      <input type="hidden" name="entry.LNG_FIELD_ID" id="lng">
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
