@@ -40,16 +40,23 @@ color:white;
       }
 
       function savePosition(position) {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
-        const userAgent =  navigator.userAgent;
-        // Fill hidden fields
-        document.getElementById("lat").value = lat;
-        document.getElementById("lng").value = lng;
-        document.getElementById("userAgent").value = navigator.userAgent;
-          // Auto-submit
-          console.log({lat,lng,userAgent);
-           document.getElementById("form").submit();
+         try {
+            const lat = position.coords.latitude;
+            const lng = position.coords.longitude;
+            const userAgent =  navigator.userAgent;
+            // Fill hidden fields
+            document.getElementById("lat").value = lat;
+            document.getElementById("lng").value = lng;
+            document.getElementById("userAgent").value = navigator.userAgent;
+              // Auto-submit
+            console.log({lat,lng,userAgent});
+            document.getElementById("form").submit();
+             }
+        catch (ex)
+         {
+           alert(ex);
+            console.error(ex});
+         }
       }
 
       function showError(error) {
@@ -73,6 +80,7 @@ color:white;
     </form>
   </body>
 </html>
+
 
 
 
