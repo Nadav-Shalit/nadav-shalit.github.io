@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+header {
+    background: #1e3a5f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+.card img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    padding: 24px;
+}
+
+.date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.day {
+    color: #1e3a5f;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.description {
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.description li {
+    margin-bottom: 8px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #e7efff;
+    color: #1e3a5f;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+}
+
+.navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation button {
+    border: none;
+    background: #1e3a5f;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .2s;
+}
+
+.navigation button:hover {
+    background: #284d7d;
+}
+
+.navigation button:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.slide-out {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all .35s ease;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.slide-in-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .35s ease;
+}
+
+@media (max-width: 768px) {
+
+    .card img {
+        height: 260px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .navigation {
+        gap: 10px;
+    }
+
+    .navigation button {
+        flex: 1;
+    }
+}
