@@ -33,16 +33,16 @@
       "date": "15/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": [],
-      "tags": []
+      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
+      "tags": ["טבע","טיול"]
     },
     {
       "day": "יום ראשון",
       "date": "16/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": [],
-      "tags": []
+      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
+      "tags": ["טבע","טיול"]
     },
     {
       "day": "יום שני",
@@ -51,7 +51,7 @@
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
         "<a href='img/map.png' target='_blank'>מפה</a>"],
-      "tags": ["אקסטרים"]
+      "tags": ["אקסטרים","טבע","טיול"]
     },
     {
       "day": "יום שלישי",
@@ -60,15 +60,15 @@
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
         "<a href='img/map.png' target='_blank'>מפה</a>"],
-      "tags": ["אקסטרים"]
+      "tags": ["אקסטרים","טבע","טיול"]
     },
     {
       "day": "יום רביעי",
       "date": "19/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": [],
-      "tags": []
+      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
+      "tags": ["טבע","טיול"]
     },
     {
       "day": "יום חמישי",
