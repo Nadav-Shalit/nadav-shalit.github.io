@@ -77,7 +77,7 @@ return `
                 <div class="title">
                     ${item.title}
                 </div>
-
+                
                 ${
                     item.desc && item.desc.length
                         ? `
@@ -89,7 +89,12 @@ return `
                         `
                         : ""
                 }
-
+                
+                ${
+                    item.iframe && item.iframe.length 
+                    ? `<div>${item.iframe}</div>` : ""
+                }
+                
                 ${
                     item.tags && item.tags.length
                         ? `
@@ -194,7 +199,7 @@ document.addEventListener("touchend", e => {
     const touchEndY = e.changedTouches[0].screenY;
     const diff = touchStartY - touchEndY;
 
-    if (Math.abs(diff) < 50) return;
+    if (Math.abs(diff) < 110) return;
 
     if (diff > 0) {
 

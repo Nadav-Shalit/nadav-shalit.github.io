@@ -33,7 +33,7 @@
       "date": "15/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
+      "desc": ["<a href='img/map.png' target='_blank'>מפת האיזור</a>"],
       "tags": ["טבע","טיול"]
     },
     {
@@ -41,8 +41,11 @@
       "date": "16/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
-      "tags": ["טבע","טיול"]
+      "desc": ["נסיעה למפלי <a href='https://maps.app.goo.gl/o72UjKZwdVLQNztT7' target='_blank'>Grawa Waterfalls</a>",
+        "נסיעה באוטובוס כ 40 דקות, מסלול של 1.5 שעות, כ 2 ק''מ",
+        "<a href='img/map.png' target='_blank'>מפת האיזור</a>"],
+      "tags": ["טבע","מסלול טיול","מפלים","אוטובוס"],
+      "iframe":"<iframe src='https://www.komoot.com/tour/3116376735/embed?share_token=a4iXN34HiWYXfxSkNfYhToZMP2P4W1Tidco48Aihht18mgZK6M&amp;layout=compact' width='100%' height='260' frameborder='0' scrolling='no'></iframe>"
     },
     {
       "day": "יום שני",
@@ -50,7 +53,7 @@
       "image": "MountainKart.jpg",
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
-        "<a href='img/map.png' target='_blank'>מפה</a>"],
+        "<a href='img/map.png' target='_blank'>מפת האיזור</a>"],
       "tags": ["אקסטרים","טבע","טיול"]
     },
     {
@@ -59,7 +62,7 @@
       "image": "AlpineSlids.jpg",
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
-        "<a href='img/map.png' target='_blank'>מפה</a>"],
+       "<a href='img/map.png' target='_blank'>מפת האיזור</a>"],
       "tags": ["אקסטרים","טבע","טיול"]
     },
     {
@@ -67,7 +70,7 @@
       "date": "19/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
+      "desc": ["<a href='img/map.png' target='_blank'>מפת האיזור</a>"],
       "tags": ["טבע","טיול"]
     },
     {
