@@ -41,8 +41,10 @@
       "date": "16/08/2026",
       "image": "Fulpmes.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='img/map.png' target='_blank'>מפה</a>"],
-      "tags": ["טבע","טיול"]
+      "desc": ["נסיעה למפלי <a href='https://maps.app.goo.gl/o72UjKZwdVLQNztT7' target='_blank'>grawa waterfalls</a>",
+        "<a href='img/map.png' target='_blank'>מפה</a>"],
+      "tags": ["טבע","מסלול טיול","מפלים"],
+      "iframe":"<iframe src='https://www.komoot.com/tour/3116376735/embed?share_token=a4iXN34HiWYXfxSkNfYhToZMP2P4W1Tidco48Aihht18mgZK6M&amp;layout=compact' width='100%' height='260' frameborder='0' scrolling='no'></iframe>"
     },
     {
       "day": "יום שני",
