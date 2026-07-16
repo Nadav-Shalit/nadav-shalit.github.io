@@ -50,7 +50,7 @@
       "image": "MountainKart.jpg",
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
-        "<a href='/img/map.png'>מפה</a>"],
+        "<a href='img/map.png' target='_blank'>מפה</a>"],
       "tags": ["אקסטרים"]
     },
     {
@@ -59,7 +59,7 @@
       "image": "AlpineSlids.jpg",
       "title": "פולפאמס",
       "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
-        "<a href='/img/map.png'>מפה</a>"],
+        "<a href='img/map.png' target='_blank'>מפה</a>"],
       "tags": ["אקסטרים"]
     },
     {
