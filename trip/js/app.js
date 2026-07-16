@@ -61,34 +61,42 @@ function buildHtml(item) {
     const desc = item.desc || [];
     const tags = item.tags || [];
 
-    return `
+return `
         <div class="card">
 
-            }" alt="${item.title}">
+            <img src="./img/${item.image}" alt="${item.title}">
 
             <div class="content">
 
                 <div class="date">${item.date}</div>
 
-                <div class="day">${item.day}</div>
+                <div class="day">
+                    ${item.day}
+                </div>
 
-                <h2 class="title">${item.title}</h2>
+                <div class="title">
+                    ${item.title}
+                </div>
 
                 ${
-                    desc.length
+                    item.desc && item.desc.length
                         ? `
                         <ul class="description">
-                            ${desc.map(d => `<li>${d}</li>`).join("")}
+                            ${item.desc
+                                .map(text => `<li>${text}</li>`)
+                                .join("")}
                         </ul>
                         `
                         : ""
                 }
 
                 ${
-                    tags.length
+                    item.tags && item.tags.length
                         ? `
                         <div class="tags">
-                            ${tags.map(t => `<span class="tag">${t}</span>`).join("")}
+                            ${item.tags
+                                .map(tag => `<span class="tag">${tag}</span>`)
+                                .join("")}
                         </div>
                         `
                         : ""
