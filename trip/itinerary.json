@@ -47,18 +47,18 @@
     {
       "day": "יום שני",
       "date": "17/08/2026",
-      "image": "Fulpmes.jpg",
+      "image": "MountainKart.jpg",
       "title": "פולפאמס",
-      "desc": [],
-      "tags": []
+      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>schlick2000</a>"],
+      "tags": ["אקסטרים"]
     },
     {
       "day": "יום שלישי",
       "date": "18/08/2026",
-      "image": "Fulpmes.jpg",
+      "image": "aplineSled.jpg",
       "title": "פולפאמס",
-      "desc": [],
-      "tags": []
+      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>schlick2000</a>"],
+      "tags": ["אקסטרים"]
     },
     {
       "day": "יום רביעי",
