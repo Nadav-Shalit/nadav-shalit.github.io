@@ -10,7 +10,7 @@ async function loadData() {
 
     try {
 
-        const response = await fetch("./itinerary.json");
+        const response = await fetch("itinerary.json");
 
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}`);
