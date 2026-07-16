@@ -1,3 +1,4 @@
+
 let itinerary = [];
 let currentIndex = 0;
 
@@ -10,29 +11,57 @@ async function loadData() {
     try {
 
         const response = await fetch("itinerary.json");
-        const data = await response.json();
 
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
         itinerary = data.itinerary;
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const futureIndex = itinerary.findIndex(item => {
+
+            const [day, month, year] = item.date.split("/");
+
+            const itemDate = new Date(
+                Number(year),
+                Number(month) - 1,
+                Number(day)
+            );
+
+            return itemDate >= today;
+        });
+
+        currentIndex =
+            futureIndex >= 0
+                ? futureIndex
+                : itinerary.length - 1;
 
         renderDay(false);
 
     } catch (error) {
 
+        console.error(error);
+
         app.innerHTML = `
             <div class="card">
                 <div class="content">
-                    <h2>שגיאה בטעינת הקובץ</h2>
+                    <h2>Failed loading itinerary.json</h2>
                 </div>
             </div>
         `;
-
-        console.error(error);
     }
 }
 
 function buildHtml(item) {
 
-    return `
+    const desc = item.desc || [];
+    const tags = item.tags || [];
+
+return `
         <div class="card">
 
             <img src="./img/${item.image}" alt="${item.title}">
@@ -79,101 +108,91 @@ function buildHtml(item) {
     `;
 }
 
-function renderDay(animated = true) {
+function renderDay(animated = true, direction = "next") {
 
     const item = itinerary[currentIndex];
 
     if (!animated) {
+
         app.innerHTML = buildHtml(item);
-    } else {
-
-        app.classList.add("slide-out");
-
-        setTimeout(() => {
-
-            app.innerHTML = buildHtml(item);
-
-            app.classList.remove("slide-out");
-
-            app.classList.add("slide-in");
-
-            requestAnimationFrame(() => {
-                app.classList.add("slide-in-active");
-            });
-
-            setTimeout(() => {
-
-                app.classList.remove("slide-in");
-                app.classList.remove("slide-in-active");
-
-            }, 350);
-
-        }, 300);
+        updateButtons();
+        return;
     }
+
+    app.className = direction === "next"
+        ? "slide-out-up"
+        : "slide-out-down";
+
+    setTimeout(() => {
+
+        app.innerHTML = buildHtml(item);
+
+        app.className = direction === "next"
+            ? "slide-in-bottom"
+            : "slide-in-top";
+
+        requestAnimationFrame(() => {
+            app.classList.add("slide-active");
+        });
+
+    }, 350);
+
+    updateButtons();
+}
+
+function updateButtons() {
 
     prevBtn.disabled = currentIndex === 0;
     nextBtn.disabled = currentIndex === itinerary.length - 1;
 }
 
-prevBtn.addEventListener("click", () => {
-
-    if (currentIndex > 0) {
-
-        currentIndex--;
-
-        renderDay(true);
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
-});
-
 nextBtn.addEventListener("click", () => {
 
-    if (currentIndex < itinerary.length - 1) {
+    if (currentIndex >= itinerary.length - 1) return;
 
-        currentIndex++;
+    currentIndex++;
+    renderDay(true, "next");
+});
 
-        renderDay(true);
+prevBtn.addEventListener("click", () => {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }
+    if (currentIndex <= 0) return;
+
+    currentIndex--;
+    renderDay(true, "prev");
 });
 
 document.addEventListener("keydown", e => {
 
-    if (e.key === "ArrowLeft") {
+    if (e.key === "ArrowUp") {
 
         if (currentIndex < itinerary.length - 1) {
+
             currentIndex++;
-            renderDay(true);
+            renderDay(true, "next");
         }
     }
 
-    if (e.key === "ArrowRight") {
+    if (e.key === "ArrowDown") {
 
         if (currentIndex > 0) {
+
             currentIndex--;
-            renderDay(true);
+            renderDay(true, "prev");
         }
     }
 });
 
-let touchStartX = 0;
+let touchStartY = 0;
 
 document.addEventListener("touchstart", e => {
-    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
 });
 
 document.addEventListener("touchend", e => {
 
-    const touchEndX = e.changedTouches[0].screenX;
-    const diff = touchStartX - touchEndX;
+    const touchEndY = e.changedTouches[0].screenY;
+    const diff = touchStartY - touchEndY;
 
     if (Math.abs(diff) < 50) return;
 
@@ -182,15 +201,17 @@ document.addEventListener("touchend", e => {
         if (currentIndex < itinerary.length - 1) {
 
             currentIndex++;
-            renderDay(true);
+            renderDay(true, "next");
         }
+
     } else {
 
         if (currentIndex > 0) {
 
             currentIndex--;
-            renderDay(true);
+            renderDay(true, "prev");
         }
     }
 });
+
 loadData();
