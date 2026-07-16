@@ -135,7 +135,11 @@ header {
     transform: translateY(0) scale(1);
     transition: all .35s ease;
 }
-
+footer {
+    color: lightgray;
+    font-size: small;
+    text-align: center;
+}
 @media(max-width:768px) {
 
     .card img {
