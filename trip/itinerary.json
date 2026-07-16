@@ -49,7 +49,8 @@
       "date": "17/08/2026",
       "image": "MountainKart.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>schlick2000</a>"],
+      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
+        "<a href='/img/map.png'>מפה</a>"],
       "tags": ["אקסטרים"]
     },
     {
@@ -57,7 +58,8 @@
       "date": "18/08/2026",
       "image": "AlpineSlids.jpg",
       "title": "פולפאמס",
-      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>schlick2000</a>"],
+      "desc": ["<a href='https://www.stubai.at/en/skiing-resorts/schlick2000/'>Schlick 2000</a>",
+        "<a href='/img/map.png'>מפה</a>"],
       "tags": ["אקסטרים"]
     },
     {
