@@ -199,7 +199,7 @@ document.addEventListener("keydown", e => {
         }
     }
 });
-
+/*
 let touchStartY = 0;
 
 document.addEventListener("touchstart", e => {
@@ -207,7 +207,7 @@ document.addEventListener("touchstart", e => {
 });
 
 document.addEventListener("touchend", e => {
-    return;
+   
     const touchEndY = e.changedTouches[0].screenY;
     const diff = touchStartY - touchEndY;
 
@@ -230,5 +230,5 @@ document.addEventListener("touchend", e => {
         }
     }
 });
-
+*/
 loadData();
