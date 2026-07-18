@@ -89,7 +89,18 @@ return `
                         `
                         : ""
                 }
-                
+                ${
+                    item.food && item.food.length
+                        ? `
+                        <div>איפה אוכלים</div>
+                        <ul class="food">
+                            ${item.desc
+                                .map(text => `<li>${text}</li>`)
+                                .join("")}
+                        </ul>
+                        `
+                        : ""
+                }
                 ${
                     item.iframe && item.iframe.length 
                     ? `<div>${item.iframe}</div>` : ""
