@@ -39,7 +39,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
     },
     {
       "day": "יום ראשון",
@@ -54,7 +54,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
       "iframe":"<iframe src='https://www.komoot.com/tour/3116376735/embed?share_token=a4iXN34HiWYXfxSkNfYhToZMP2P4W1Tidco48Aihht18mgZK6M&amp;layout=compact' width='100%' height='260' frameborder='0' scrolling='no'></iframe>"
     },
     {
@@ -68,7 +68,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
       "tags": ["אקסטרים","טבע","טיול"]
     },
     {
@@ -82,7 +82,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
       "tags": ["אקסטרים","טבע","טיול"]
     },
     {
@@ -95,7 +95,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
       "tags": ["טבע","טיול"]
     },
     {
@@ -113,7 +113,7 @@
       "<a href='https://maps.app.goo.gl/997ndfEBXcaFyLZD6' target='_blank'>PAVILLON</a>  - איטלקי - פיצה,פסטה,בשר,המבורגר - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/S32EXGHf7yPyMsH78' target='_blank'>Pizzeria Dorfalm</a>  - איטלקי - פיצה,פסטה,סלט - 10-30 אירו",
       "<a href='https://maps.app.goo.gl/vjAf7SmX9iax28GA6' target='_blank'>Herr Klaus</a>  - בשר - סלט,המבורגר,סטייק, דגים - 20-30 אירו"
-      ]
+      ],
       "tags": ["רכבת", "נוף עירוני","OBB","SBB"]
     },
     {
@@ -122,7 +122,6 @@
       "image": "BernRiver.jpg",
       "title": "ברן",
       "desc": ["מסלול מעגלי של שעה בעיר העתיקה, כ 4 ק''מ "],
-      
       "tags": ["נוף עירוני", "נהר","מסלול טיול","העיר עתיקה"],
       "iframe": "<iframe src='https://www.komoot.com/tour/3119213567/embed?share_token=apKk4a3vZO059rwu7I5CYeFAvXAvuTWBuj5t0d4IoAJTbACa8j&amp;layout=compact' width='100%' height='260' frameborder='0' scrolling='no'></iframe>"
       
