@@ -39,14 +39,18 @@
     {
       "day": "יום שבת",
       "date": "15/08/2026",
-      "image": "Fulpmes.jpg",
+      "image": "serlesbahnen-wassertal-mieders.jpg",
       "title": "פולפאמס",
-      "desc": [
+      "desc": ["<a href='https://www.stubai.at/en/interactive-map/tour/serlesbahnen-wassertal-mieders' target='_blank'>מסלול Serlesbahnen Wassertal Mieders</a>",
+        "אוטובוס קו 590 כ 10 דקות נסיעה ל <a href='https://maps.app.goo.gl/jiDuDAhMdrNB1vDS8'> רכבל Serlesbahnen Mieders</a>🚠",
+        "כ 7 ק''מ , מסלול של 3 שעות עולים ברכבל לגובה של 1600 מ ",
         "<a href='img/map.png' target='_blank'>מפת האיזור</a>"
       ],
       "tags": [
         "טבע",
-        "טיול"
+        "מסלול טיול",
+        "רכבל",
+        "אוטובוס"
       ],
       "food": [
         "<a href='https://maps.app.goo.gl/DFgTNXCAYVcNy4Ec7' target='_blank'>Casanova</a> - איטלקי - פיצה,סלט,פסטה,ריזוטו - 10-20 אירו ",
