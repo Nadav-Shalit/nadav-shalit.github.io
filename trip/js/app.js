@@ -94,7 +94,7 @@ return `
                         ? `
                         <div>איפה אוכלים</div>
                         <ul class="food">
-                            ${item.desc
+                            ${item.food
                                 .map(text => `<li>${text}</li>`)
                                 .join("")}
                         </ul>
