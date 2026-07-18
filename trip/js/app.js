@@ -81,6 +81,7 @@ return `
                 ${
                     item.desc && item.desc.length
                         ? `
+                        <div class="subTitle">תוכנית</div>
                         <ul class="description">
                             ${item.desc
                                 .map(text => `<li>${text}</li>`)
