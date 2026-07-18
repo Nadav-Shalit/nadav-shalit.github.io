@@ -211,7 +211,7 @@ document.addEventListener("touchend", e => {
     const touchEndY = e.changedTouches[0].screenY;
     const diff = touchStartY - touchEndY;
 
-    if (Math.abs(diff) < 110) return;
+    if (Math.abs(diff) < 180) return;
 
     if (diff > 0) {
 
