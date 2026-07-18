@@ -70,8 +70,11 @@ header {
     color: #009688;
 }
 .food {
+     margin-bottom: 15px;
+}
+.food li {
     font-size: small;
-     margin-bottom: 6px;
+     margin-bottom: 5px;
 }
 .description {
     line-height: 1.8;
