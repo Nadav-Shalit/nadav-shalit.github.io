@@ -64,7 +64,10 @@ header {
     font-size: 32px;
     margin-bottom: 20px;
 }
-
+.subTitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 .description {
     line-height: 1.8;
     margin-bottom: 20px;
@@ -164,6 +167,9 @@ footer {
 
     .title {
         font-size: 24px;
+    }
+    .subTitle {
+        font-size: 18px;
     }
 
     .navigation {
