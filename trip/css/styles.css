@@ -69,6 +69,9 @@ header {
     margin-bottom: 20px;
     color:"#009688";
 }
+.food {
+    font-size: small;
+}
 .description {
     line-height: 1.8;
     margin-bottom: 20px;
