@@ -60,6 +60,7 @@ function buildHtml(item) {
 
     const desc = item.desc || [];
     const tags = item.tags || [];
+    const foods = item.food || [];
 
 return `
         <div class="card">
