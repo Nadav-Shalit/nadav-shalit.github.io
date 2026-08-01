@@ -210,14 +210,19 @@
       "image": "MilanShopping.jpg",
       "title": "מילאנו",
       "desc": [
-        
-        "הבנות הולכות לקניות 👜🛍️ "
+        "קניות 👜🛍️ ",
+        "<a href='https://www.museoscienza.org/en' target='_blank'>מוזיאון דה וינצ'י</a>"
       ],
       "tags": [
         "נוף עירוני",
         "קניות",
-        "תערוכה"
-      ]
+        "מוזיאון",
+        "MUJI",
+        "PRIMARK"
+      ],
+       "food": [
+        "<a href='https://www.pizmilano.it/menu-eng/pizzas/' target='_blank'>PIZ Pizza</a> - איטלקי - פיצה - 10-12 אירו "
+      ],
     },
     {
       "day": "יום שני",
@@ -225,12 +230,10 @@
       "image": "MilanShopping.jpg",
       "title": "מילאנו",
       "desc": [
-        
+        "<a href='https://www.aquaworld.it/en/parco/mappa' target='_blank'>פארק מים aquaworld </a>"
       ],
       "tags": [
-        "נוף עירוני",
-        "קניות",
-        "תערוכה"
+        "פארק מים",
       ]
     },
     {
@@ -239,6 +242,7 @@
       "image": "tlv2026.jpg",
       "title": "מילאנו > תל אביב",
       "desc": [
+        "09:00 <a href='https://maps.app.goo.gl/xocpjMaiam4TiFHd7'  target='_blank'>מסלול</a> יציאה לכיוון שדה התעופה"
         "13:05 המראה טיסה W4 6403",
         "18:00 נחיתה (שעון ישראל)"
       ],
