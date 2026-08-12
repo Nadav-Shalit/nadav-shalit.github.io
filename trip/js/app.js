@@ -94,7 +94,7 @@ return `
                 ${
                     item.food && item.food.length
                         ? `
-                        <div class="subTitle">מסעדות</div>
+                        <div class="subTitle">מה עם אוכל</div>
                         <ul class="food">
                             ${item.food
                                 .map(text => `<li>${text}</li>`)
