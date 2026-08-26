@@ -49,7 +49,7 @@ async function loadData() {
         app.innerHTML = `
             <div class="card">
                 <div class="content">
-                    <h2>Failed loading itinerary.json</h2>
+                    <h2>מתכננים את הטיול הבא...</h2>
                 </div>
             </div>
         `;
