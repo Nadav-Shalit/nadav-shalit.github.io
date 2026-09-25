@@ -1,0 +1,160 @@
+{ 
+  "itinerary": [
+    {
+      "day": "יום חמישי",
+      "date": "24/09/2026",
+      "image": "1.jpg",
+      "title": "תל אביב > לונדון",
+      "desc": [
+        "21.45 המראה טיסה ",
+        "01:05 נחיתה - שעון לונדון",
+        "במונית לדירה בלילה <a href='https://www.booking.com/hotel/gb/soho-royal-view.en-gb.html' target='_blank'>Soho royal 8 A</a>"
+      ],
+      "tags": [
+        "טיסה"
+      ]
+    },
+    {
+      "day": "יום שישי",
+      "date": "25/09/2026",
+      "image": "2.png",
+      "title": "המוזיאון הבריטי - British Museum",
+      "desc": [
+        "המוזיאון הבריטי הוא אחד מהמוזיאונים הגדולים והמפורסמים בעולם.<br/> המוזיאון מציג בעיקר עתיקות ויצירות אמנות ונמצא בשכונת בלומסברי ברובע קמדן שבלונדון",
+        "צ'ק אין <a href='https://www.booking.com/hotel/at/appartements-am-kirchplatz.en-gb.html' target='_blank' >Appartements am Kirchplatz</a>"
+      ],
+      "tags": [
+        "מוזיאון"
+      ]
+    },
+    {
+      "day": "יום שבת",
+      "date": "26/09/2026",
+      "image": "3.jpg",
+      "title": "פורטובלו",
+      "desc": ["ליה ביקור דודים"],
+      "tags": [
+        "שוק",
+        "משפחה"
+      ]
+    },
+    {
+      "day": "יום ראשון",
+      "date": "27/09/2026",
+      "image": "4.jpg",
+      "title": "Sky Garden & Shakespeare's Globe Theatre",
+      "desc": [
+        "14:15 <a href='https://www.skygarden.com/' target='_blank'>Sky Garden</a>  גורד שחקים הידוע בכינויו ווקי טוקי עקב צורתו הייחודית עם מסעדה בקומה העליונה."
+        ,"<a href='https://www.shakespearesglobe.com/' target='_blank'>Shakespeare's Globe Theatre</a> התיאטרון המקורי של שייקספיר  נבנה ב-1599, והשחזור הנוכחי נפתח בשנת 1997 "
+      ],
+      "tags": [
+        "גורד שחקים",
+        "תיאטרון"
+      ]
+    },
+    {
+      "day": "יום שני",
+      "date": "28/09/2026",
+      "image": "5.jpg",
+      "title": "סיור גרפיטי - Graffiti Tour",
+      "desc": [
+        "ציור שבתמונה הוא ציור קיר (גרפיטי) שנודע בשם ``Hydra Towers``, ויצירתו מיוחסת לאמן הרחוב הידוע <a href='https://www.instagram.com/phlegm_art/' target='_blank'>phlegm</a>."
+      ],
+      
+      "tags": [
+        "אומנות רחוב"
+      ]
+    },
+    {
+      "day": "יום שלישי",
+      "date": "29/09/2026",
+      "image": "6.jpg",
+      "title": "Walling tour & ``Lion King'' Musical",
+      "desc": [
+        "Harry Potter - <a href='https://www.wbstudiotour.co.uk/the-experience/whats-on/dark-arts/' target='_blank'>Warner Bros סיור מאחורי הקלעים של סרטי הארי פוטר</a>"
+      ],
+      
+      "tags": [
+        "Harry Potter",
+        "💐 יום הולדת לאבא 🎂"
+      ]
+    },
+    {
+      "day": "יום רביעי",
+      "date": "30/09/2026",
+      "image": "7.jpg",
+      "title": "Walling tour & ``Lion King'' Musical",
+      "desc": [
+        "10:30 Walling tour - סיור רגלי ברחובות לונדון",
+        "19:30 מחזמר ``Lion King`` "
+      ],
+      
+      "tags": [
+        "נוף עירוני",
+        "מחזמר"
+      ],
+      "iframe": "<iframe data-testid='embed-iframe' style='border-radius:12px' src='https://open.spotify.com/embed/album/1y6p6tINBthUWsQVQJmiYK?utm_source=generator&si=181939d824784d83' width='100%' height='352' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
+    },
+    {
+      "day": "יום חמישי",
+      "date": "01/10/2026",
+      "image": "8.jpg",
+      "title": "``Mamma Mia`` musical",
+      "desc": [
+        "19:30 "
+      ],
+      
+      "tags": [
+        "מחזמר"
+      ],
+      "iframe": "<iframe data-testid='embed-iframe' style='border-radius:12px' src='https://open.spotify.com/embed/album/2WvAIsHufjDBdb3mZcmjoE?utm_source=generator&si=6a6655016756476c' width='100%' height='352' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy'></iframe>"
+
+    },
+    {
+      "day": "יום חמישי",
+      "date": "02/10/2026",
+      "image": "9.jpg",
+      "title": "Cambridge - 'קיימברידג",
+      "desc": [
+        "Cambridge - קיימברידג' היא עיר באנגליה, במחוז קיימברידג'שייר, 80 ק``מ צפונית ללונדון <a href='https://www.cambridge.gov.uk/visit-cambridge' target='_blank'>סיור בעיר</a>",
+        "מקור השם - הגשר על נהר קאם",
+        " `ידועה בכל העולם בשל אוניברסיטת קיימברידג' "
+      ],
+      
+      "tags": [
+        "אוניברסיטה",
+        "נהר"
+      ]
+    },
+    {
+      "day": "יום שישי",
+      "date": "03/10/2026",
+      "image": "10.jpg",
+      "title": "Cambridge - 'קיימברידג",
+      "desc": [
+        "Cambridge - קיימברידג' היא עיר באנגליה, במחוז קיימברידג'שייר, 80 ק``מ צפונית ללונדון <a href='https://www.cambridge.gov.uk/visit-cambridge' target='_blank'>סיור בעיר</a>",
+        "מקור השם - הגשר על נהר קאם",
+        " `ידועה בכל העולם בשל אוניברסיטת קיימברידג' "
+      ],
+      
+      "tags": [
+        "אוניברסיטה",
+        "נהר"
+      ]
+    },
+    {
+      "day": "יום שבת",
+      "date": "04/08/2026",
+      "image": "11.png",
+      "title": "לונדון > תל אביב",
+      "desc": [
+            "14:25 המראה ",
+            "21:35 נחיתה - שעון ישראל"
+      ],
+      "tags": [
+        "טיסה"
+      ]
+    }
+    
+  ]
+}
