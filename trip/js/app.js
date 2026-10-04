@@ -65,7 +65,7 @@ function buildHtml(item) {
 return `
         <div class="card">
 
-            <img src="./img/${item.image}" alt="${item.title}">
+            <img src="./img/${item.image}" alt="${item.title}" class="card">
 
             <div class="content">
 
